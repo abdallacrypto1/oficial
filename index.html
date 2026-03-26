@@ -153,7 +153,7 @@
   }
 
   .product-desc {
-    font-size: 13px; color: var(--text-muted);
+    font-size: 13px; color: #999;
     line-height: 1.4;
   }
 
@@ -234,7 +234,7 @@
   }
 
   .lc-desc {
-    font-size: 13px; color: var(--text-muted);
+    font-size: 13px; color: #999;
     white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
 
@@ -290,6 +290,25 @@
     50% { opacity: 0.3; }
   }
 
+  /* ── Lang toggle ── */
+  .lang-toggle {
+    position: absolute; top: 56px; right: 24px;
+    display: flex; align-items: center; gap: 6px;
+    opacity: 0; animation: up 0.6s ease 0.05s forwards;
+  }
+
+  .lang-btn {
+    background: none; border: none; cursor: pointer;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--text-muted); padding: 0;
+    transition: color 0.2s;
+  }
+
+  .lang-btn.active { color: var(--teal); }
+  .lang-btn:hover { color: var(--teal); }
+  .lang-sep { font-family: var(--mono); font-size: 11px; color: var(--text-muted); }
+
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--bg); }
   ::-webkit-scrollbar-thumb { background: #1c1c1c; }
@@ -344,10 +363,17 @@
 <body>
 <div class="page">
 
+  <!-- Lang toggle -->
+  <div class="lang-toggle">
+    <button onclick="setLang('pt')" id="btn-pt" class="lang-btn active">PT</button>
+    <span class="lang-sep">|</span>
+    <button onclick="setLang('en')" id="btn-en" class="lang-btn">EN</button>
+  </div>
+
   <!-- Status -->
   <div class="status">
     <div class="status-dot"></div>
-    <span>Sistema Online</span>
+    <span data-pt="Sistema Online" data-en="System Online">Sistema Online</span>
   </div>
 
   <!-- Profile -->
@@ -357,7 +383,7 @@
     </div>
     <div class="handle">@abdallacrypto</div>
     <h1 class="hero-title">PREMIUM<br>TOOLS FOR<span>TRADERS</span></h1>
-    <p class="hero-sub">Tudo que você precisa para operar com mais clareza e consistência.</p>
+    <p class="hero-sub" data-pt="Tudo que você precisa para operar com mais clareza e consistência." data-en="Everything you need to trade with more clarity and consistency.">Tudo que você precisa para operar com mais clareza e consistência.</p>
   </div>
 
   <!-- Product cards -->
@@ -368,7 +394,7 @@
       <div class="product-emoji">📊</div>
       <div class="product-body">
         <div class="product-title">SMC Execution Engine</div>
-        <div class="product-desc">Indicador profissional para TradingView</div>
+        <div class="product-desc" data-pt="Indicador profissional para TradingView" data-en="Professional indicator for TradingView">Indicador profissional para TradingView</div>
       </div>
       <div class="product-chevron">›</div>
     </div>
@@ -377,24 +403,24 @@
         <a href="https://abdallacrypto1.github.io/smc-execution-engine/" target="_blank" class="link-card">
           <div class="lc-icon">📊</div>
           <div class="lc-body">
-            <div class="lc-title">Ver como funciona</div>
-            <div class="lc-desc">Conheça o SMC Execution Engine</div>
+            <div class="lc-title" data-pt="Ver como funciona" data-en="See how it works">Ver como funciona</div>
+            <div class="lc-desc" data-pt="Conheça o SMC Execution Engine" data-en="Learn about SMC Execution Engine">Conheça o SMC Execution Engine</div>
           </div>
           <div class="lc-arrow">→</div>
         </a>
         <a href="https://hotmart.com/pt-br/marketplace/produtos/smc-execution-engine-pro/N103839549P" target="_blank" class="link-card">
           <div class="lc-icon">🛒</div>
           <div class="lc-body">
-            <div class="lc-title">Adquirir Versão PRO</div>
-            <div class="lc-desc">Acesso completo via Hotmart</div>
+            <div class="lc-title" data-pt="Adquirir Versão PRO" data-en="Get PRO Version">Adquirir Versão PRO</div>
+            <div class="lc-desc" data-pt="Acesso completo via Hotmart" data-en="Full access via Hotmart">Acesso completo via Hotmart</div>
           </div>
           <div class="lc-arrow">→</div>
         </a>
         <a href="https://forms.gle/M9efxembLc7vxHeq8" target="_blank" class="link-card">
           <div class="lc-icon">⚡</div>
           <div class="lc-body">
-            <div class="lc-title">Teste Gratuito — 30 dias</div>
-            <div class="lc-desc">Solicite acesso trial da Versão PRO</div>
+            <div class="lc-title" data-pt="Teste Gratuito — 30 dias" data-en="Free Trial — 30 days">Teste Gratuito — 30 dias</div>
+            <div class="lc-desc" data-pt="Solicite acesso trial da Versão PRO" data-en="Request trial access to PRO Version">Solicite acesso trial da Versão PRO</div>
           </div>
           <div class="lc-arrow">→</div>
         </a>
@@ -406,7 +432,7 @@
       <div class="product-emoji">📲</div>
       <div class="product-body">
         <div class="product-title">CryptoReports</div>
-        <div class="product-desc">App de PnL para traders — iOS &amp; Android</div>
+        <div class="product-desc" data-pt="App de PnL para traders — iOS & Android" data-en="PnL app for traders — iOS & Android">App de PnL para traders — iOS &amp; Android</div>
       </div>
       <div class="product-chevron">›</div>
     </div>
@@ -428,14 +454,14 @@
               <text x="36" y="27" fill="#fff" font-family="'IBM Plex Mono',monospace" font-size="14" font-weight="700" letter-spacing="-0.3">Google Play</text>
               <polygon points="14,12 14,28 23,20" fill="#00d4aa"/>
             </svg>
-            <span class="store-soon">em breve</span>
+            <span class="store-soon" data-pt="em breve" data-en="coming soon">em breve</span>
           </div>
         </div>
         <a href="https://www.youtube.com/watch?v=qpAZzHGbG0k" target="_blank" class="link-card">
           <div class="lc-icon">▶️</div>
           <div class="lc-body">
-            <div class="lc-title">Como ver seu PnL real na Bybit, Binance e Weex</div>
-            <div class="lc-desc">Com taxas e funding — YouTube</div>
+            <div class="lc-title" data-pt="Como ver seu PnL real na Bybit, Binance e Weex" data-en="How to see your real PnL on Bybit, Binance and Weex">Como ver seu PnL real na Bybit, Binance e Weex</div>
+            <div class="lc-desc" data-pt="Com taxas e funding — YouTube" data-en="With fees and funding — YouTube">Com taxas e funding — YouTube</div>
           </div>
           <div class="lc-arrow">→</div>
         </a>
@@ -448,7 +474,7 @@
       <div class="product-emoji">🚀</div>
       <div class="product-body">
         <div class="product-title">CriptoAlert</div>
-        <div class="product-desc">Monitoramento de mercado 24/7</div>
+        <div class="product-desc" data-pt="Monitoramento de mercado 24/7" data-en="24/7 market monitoring">Monitoramento de mercado 24/7</div>
       </div>
       <div class="product-chevron">›</div>
     </div>
@@ -457,24 +483,24 @@
         <a href="https://www.criptoalert.com.br/?ref=ABDALLA" target="_blank" class="link-card">
           <div class="lc-icon">🔔</div>
           <div class="lc-body">
-            <div class="lc-title">Testar o CriptoAlert</div>
-            <div class="lc-desc">Começe grátis e veja o poder do sistema na prática</div>
+            <div class="lc-title" data-pt="Testar o CriptoAlert" data-en="Try CriptoAlert">Testar o CriptoAlert</div>
+            <div class="lc-desc" data-pt="Começe grátis e veja o poder do sistema na prática" data-en="Start free and see the system in action">Começe grátis e veja o poder do sistema na prática</div>
           </div>
           <div class="lc-arrow">→</div>
         </a>
         <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MTAxOTI0MzAyNzIyNzQ4?story_media_id=3746135292274186723&igsh=MXZnNW41am16cHFicQ==" target="_blank" class="link-card">
           <div class="lc-icon">🎥</div>
           <div class="lc-body">
-            <div class="lc-title">Como funciona na prática</div>
-            <div class="lc-desc">Vídeo demonstrativo</div>
+            <div class="lc-title" data-pt="Como funciona na prática" data-en="How it works in practice">Como funciona na prática</div>
+            <div class="lc-desc" data-pt="Vídeo demonstrativo" data-en="Demo video">Vídeo demonstrativo</div>
           </div>
           <div class="lc-arrow">→</div>
         </a>
         <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MTAxOTI0MzAyNzIyNzQ4?story_media_id=3752185538263577643&igsh=MXZnNW41am16cHFicQ==" target="_blank" class="link-card">
           <div class="lc-icon">📈</div>
           <div class="lc-body">
-            <div class="lc-title">Resultados identificados</div>
-            <div class="lc-desc">Oportunidades de trade reais</div>
+            <div class="lc-title" data-pt="Resultados identificados" data-en="Identified results">Resultados identificados</div>
+            <div class="lc-desc" data-pt="Oportunidades de trade reais" data-en="Real trade opportunities">Oportunidades de trade reais</div>
           </div>
           <div class="lc-arrow">→</div>
         </a>
@@ -501,7 +527,7 @@
       <circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.5"/>
       <circle cx="17.5" cy="6.5" r="1" fill="#fff"/>
     </svg>
-    @abdallacrypto no Instagram
+    <span data-pt="@abdallacrypto no Instagram" data-en="@abdallacrypto on Instagram">@abdallacrypto no Instagram</span>
   </a>
 
   <footer>
@@ -514,21 +540,31 @@
   function toggle(id, card) {
     const wrap = document.getElementById(id);
     const isOpen = wrap.classList.contains('open');
-
-    // Close all
     document.querySelectorAll('.section-wrap').forEach(w => w.classList.remove('open'));
     document.querySelectorAll('.product-card').forEach(c => c.classList.remove('open'));
-
-    // Open clicked (if it was closed)
     if (!isOpen) {
       wrap.classList.add('open');
       card.classList.add('open');
-      // Scroll card into view on mobile
-      setTimeout(() => {
-        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 50);
+      setTimeout(() => { card.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
     }
   }
+
+  function setLang(lang) {
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    document.querySelectorAll('[data-pt]').forEach(el => {
+      el.textContent = el.dataset[lang];
+    });
+    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    localStorage.setItem('lang', lang);
+  }
+
+  (function () {
+    const saved = localStorage.getItem('lang');
+    const browser = (navigator.language || '').toLowerCase();
+    const lang = saved || (browser.startsWith('pt') ? 'pt' : 'en');
+    if (lang === 'en') setLang('en');
+  })();
 </script>
 
 </body>

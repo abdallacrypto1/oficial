@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>@abdallacrypto</title>
+<title>@abdallacrypto — Premium Tools for Traders</title>
+<meta name="description" content="Ferramentas premium para traders: SMC Execution Engine, CryptoReports e CriptoAlert. Por @abdallacrypto.">
+<meta property="og:title" content="@abdallacrypto — Premium Tools for Traders">
+<meta property="og:description" content="Ferramentas premium para traders: SMC Execution Engine, CryptoReports e CriptoAlert.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/80043299?v=4">
+<meta property="og:url" content="https://abdallacrypto.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23080808'/><text x='50' y='68' text-anchor='middle' font-size='56' fill='%2300d4aa'>A</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
@@ -82,7 +90,16 @@
     overflow: hidden; margin-bottom: 22px;
   }
 
-  .avatar img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(10%); }
+  .avatar img {
+    width: 100%; height: 100%; object-fit: cover;
+    filter: grayscale(10%);
+    transition: filter 0.3s, transform 0.3s;
+  }
+
+  .avatar:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
 
   .handle {
     font-family: var(--mono); font-size: 13px;
@@ -98,6 +115,10 @@
   }
 
   .hero-title span { color: var(--teal); display: block; }
+
+  .hero-title span {
+    text-shadow: 0 0 40px rgba(0,212,170,0.25), 0 0 80px rgba(0,212,170,0.10);
+  }
 
   .hero-sub {
     font-size: 17px; color: var(--text-dim);
@@ -138,6 +159,7 @@
   .product-card:hover {
     border-color: var(--teal-border);
     background: var(--bg-card2);
+    box-shadow: 0 4px 24px rgba(0,212,170,0.06);
   }
 
   .product-card:hover::before { transform: scaleY(1); }
@@ -214,6 +236,7 @@
     border-color: var(--teal-border);
     background: var(--bg-card);
     transform: translateX(4px);
+    box-shadow: 0 2px 16px rgba(0,212,170,0.06);
   }
 
   .link-card:hover::before { transform: scaleY(1); }
@@ -284,6 +307,19 @@
   }
 
   footer span { color: var(--teal); }
+
+  .footer-line {
+    width: 40px; height: 1px;
+    background: var(--teal-border);
+    margin: 0 auto 16px;
+  }
+
+  .footer-copy {
+    margin-top: 6px;
+    font-family: var(--mono); font-size: 9px;
+    letter-spacing: 0.14em; color: var(--text-muted);
+    text-transform: uppercase;
+  }
 
   /* ── Animations ── */
   @keyframes up {
@@ -383,7 +419,7 @@
   <!-- Profile -->
   <div class="profile">
     <div class="avatar">
-      <img src="data:image/png;base64,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" alt="@abdallacrypto">
+      <img src="https://avatars.githubusercontent.com/u/80043299?v=4" alt="@abdallacrypto">
     </div>
     <div class="handle">@abdallacrypto</div>
     <h1 class="hero-title">PREMIUM<br>TOOLS FOR<span>TRADERS</span></h1>
@@ -395,7 +431,7 @@
 
     <!-- SMC -->
     <a href="https://engine.abdallacrypto.com/" target="_blank" class="product-card" style="text-decoration:none;color:inherit;cursor:pointer">
-      <div class="product-emoji">📊</div>
+      <div class="product-emoji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 5-8"/></svg></div>
       <div class="product-body">
         <div class="product-title">SMC Execution Engine</div>
         <div class="product-desc" data-pt="Indicador profissional para TradingView" data-en="Professional indicator for TradingView">Indicador profissional para TradingView</div>
@@ -405,7 +441,7 @@
 
     <!-- CryptoReports -->
     <div class="product-card" onclick="toggle('crypto', this)">
-      <div class="product-emoji">📲</div>
+      <div class="product-emoji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></div>
       <div class="product-body">
         <div class="product-title">CryptoReports</div>
         <div class="product-desc" data-pt="App de PnL para traders — iOS & Android" data-en="PnL app for traders — iOS & Android">App de PnL para traders — iOS &amp; Android</div>
@@ -433,7 +469,7 @@
           </a>
         </div>
         <a href="https://www.youtube.com/watch?v=qpAZzHGbG0k" target="_blank" class="link-card">
-          <div class="lc-icon">▶️</div>
+          <div class="lc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--teal)" stroke="none"><polygon points="5,3 19,12 5,21"/></svg></div>
           <div class="lc-body">
             <div class="lc-title" data-pt="Como ver seu PnL real na Bybit, Binance e Weex" data-en="How to see your real PnL on Bybit, Binance and Weex">Como ver seu PnL real na Bybit, Binance e Weex</div>
             <div class="lc-desc" data-pt="Com taxas e funding — YouTube" data-en="With fees and funding — YouTube">Com taxas e funding — YouTube</div>
@@ -446,7 +482,7 @@
 
     <!-- CriptoAlert -->
     <div class="product-card" onclick="toggle('alert', this)">
-      <div class="product-emoji">🚀</div>
+      <div class="product-emoji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
       <div class="product-body">
         <div class="product-title">CriptoAlert</div>
         <div class="product-desc" data-pt="Monitoramento de mercado 24/7" data-en="24/7 market monitoring">Monitoramento de mercado 24/7</div>
@@ -456,7 +492,7 @@
     <div class="section-wrap" id="alert">
       <div class="section-inner">
         <a href="https://www.criptoalert.com.br/?ref=ABDALLA" target="_blank" class="link-card">
-          <div class="lc-icon">🔔</div>
+          <div class="lc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
           <div class="lc-body">
             <div class="lc-title" data-pt="Testar o CriptoAlert" data-en="Try CriptoAlert">Testar o CriptoAlert</div>
             <div class="lc-desc" data-pt="Começe grátis e veja o poder do sistema na prática" data-en="Start free and see the system in action">Começe grátis e veja o poder do sistema na prática</div>
@@ -464,7 +500,7 @@
           <div class="lc-arrow">→</div>
         </a>
         <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MTAxOTI0MzAyNzIyNzQ4?story_media_id=3746135292274186723&igsh=MXZnNW41am16cHFicQ==" target="_blank" class="link-card">
-          <div class="lc-icon">🎥</div>
+          <div class="lc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 9l5 3-5 3z"/></svg></div>
           <div class="lc-body">
             <div class="lc-title" data-pt="Como funciona na prática" data-en="How it works in practice">Como funciona na prática</div>
             <div class="lc-desc" data-pt="Vídeo demonstrativo" data-en="Demo video">Vídeo demonstrativo</div>
@@ -472,7 +508,7 @@
           <div class="lc-arrow">→</div>
         </a>
         <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MTAxOTI0MzAyNzIyNzQ4?story_media_id=3752185538263577643&igsh=MXZnNW41am16cHFicQ==" target="_blank" class="link-card">
-          <div class="lc-icon">📈</div>
+          <div class="lc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
           <div class="lc-body">
             <div class="lc-title" data-pt="Resultados identificados" data-en="Identified results">Resultados identificados</div>
             <div class="lc-desc" data-pt="Oportunidades de trade reais" data-en="Real trade opportunities">Oportunidades de trade reais</div>
@@ -506,7 +542,9 @@
   </a>
 
   <footer>
+    <div class="footer-line"></div>
     <p>built by <span>@abdallacrypto</span> · premium tools for traders</p>
+    <p class="footer-copy">&copy; 2025 abdallacrypto. all rights reserved.</p>
   </footer>
 
 </div>

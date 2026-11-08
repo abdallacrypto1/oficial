@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>@abdallacrypto — Premium Tools for Traders</title>
-<meta name="description" content="Ferramentas premium para traders: SMC Execution Engine, RiskCalc e CryptoReports. Por @abdallacrypto.">
+<meta name="description" content="Ferramentas premium para traders: SMC Engine PRO, conta na OKX, RiskCalc, Painel MTF e CryptoReports. Por @abdallacrypto.">
 <meta property="og:title" content="@abdallacrypto — Premium Tools for Traders">
-<meta property="og:description" content="Ferramentas premium para traders: SMC Execution Engine, RiskCalc e CryptoReports.">
+<meta property="og:description" content="Ferramentas premium para traders: SMC Engine PRO, conta na OKX, RiskCalc, Painel MTF e CryptoReports.">
 <meta property="og:image" content="https://abdallacrypto.com/avatar.jpg">
 <meta property="og:url" content="https://abdallacrypto.com">
 <meta property="og:type" content="website">
@@ -196,6 +196,77 @@
     transform: rotate(90deg);
     color: var(--teal);
   }
+
+  /* ── Destaques (SMC Engine + OKX) ── */
+  .featured {
+    display: flex; flex-direction: column; gap: 12px;
+    margin-bottom: 30px;
+    opacity: 0; animation: up 0.6s ease 0.22s forwards;
+  }
+  .feat-card {
+    display: block; position: relative; overflow: hidden;
+    padding: 24px 22px 22px;
+    background: linear-gradient(180deg, rgba(0,212,170,0.08), rgba(0,212,170,0.02));
+    border: 1px solid var(--teal-border); border-radius: 6px;
+    text-decoration: none; color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  }
+  .feat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--teal);
+    box-shadow: 0 8px 32px rgba(0,212,170,0.16);
+  }
+  .feat-tag {
+    display: inline-block;
+    font-family: var(--mono); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--teal); background: rgba(0,212,170,0.10);
+    border: 1px solid var(--teal-border); border-radius: 3px;
+    padding: 3px 8px; margin-bottom: 14px;
+  }
+  .feat-icon { position: absolute; top: 20px; right: 20px; }
+  .feat-title {
+    font-family: var(--mono); font-size: 23px; font-weight: 700;
+    color: #fff; line-height: 1.15; margin-bottom: 8px;
+    padding-right: 56px;
+  }
+  .feat-desc {
+    font-size: 14px; color: var(--text-dim); line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .feat-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--mono); font-size: 13px; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: #06100e; background: var(--teal);
+    border-radius: 4px; padding: 11px 16px;
+    box-shadow: 0 0 18px rgba(0,212,170,0.25);
+    transition: box-shadow 0.2s;
+  }
+  .feat-card:hover .feat-cta { box-shadow: 0 0 28px rgba(0,212,170,0.45); }
+
+  .feat-okx {
+    background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.015));
+    border-color: rgba(255,255,255,0.22);
+  }
+  .feat-okx:hover { border-color: rgba(255,255,255,0.55); box-shadow: 0 8px 32px rgba(255,255,255,0.08); }
+  .feat-okx .feat-tag { color: #fff; background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.22); }
+  .feat-okx .feat-cta { color: #000; background: #fff; box-shadow: 0 0 18px rgba(255,255,255,0.14); }
+  .feat-okx:hover .feat-cta { box-shadow: 0 0 28px rgba(255,255,255,0.28); }
+  .okx-mark {
+    font-family: var(--mono); font-size: 18px; font-weight: 700;
+    letter-spacing: 0.08em; color: #fff;
+  }
+
+  .more-label {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--text-muted); margin: 0 0 10px 2px;
+    opacity: 0; animation: up 0.6s ease 0.25s forwards;
+  }
+  .products .product-card { padding: 14px 16px; }
+  .products .product-title { font-size: 14px; }
+  .products .product-desc { font-size: 12px; }
 
   /* ── Expandable sections ── */
   .section-wrap {
@@ -427,18 +498,31 @@
     <p class="hero-sub" data-pt="Tudo que você precisa para operar com mais clareza e consistência." data-en="Everything you need to trade with more clarity and consistency.">Tudo que você precisa para operar com mais clareza e consistência.</p>
   </div>
 
+  <!-- Destaques -->
+  <div class="featured">
+
+    <a href="https://engine.abdallacrypto.com/" target="_blank" class="feat-card">
+      <span class="feat-tag" data-pt="Produto principal" data-en="Flagship product">Produto principal</span>
+      <div class="feat-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 5-8"/></svg></div>
+      <div class="feat-title">SMC Engine PRO</div>
+      <div class="feat-desc" data-pt="Indicador profissional de Smart Money Concepts para TradingView: estrutura, order blocks e alertas de execução, com backtest público e track record ao vivo." data-en="Professional Smart Money Concepts indicator for TradingView: structure, order blocks and execution alerts, with public backtest and live track record.">Indicador profissional de Smart Money Concepts para TradingView: estrutura, order blocks e alertas de execução, com backtest público e track record ao vivo.</div>
+      <span class="feat-cta" data-pt="Conhecer o indicador →" data-en="See the indicator →">Conhecer o indicador →</span>
+    </a>
+
+    <a href="https://www.okx.com/join/ABDALLACRYPTO" target="_blank" rel="noopener" class="feat-card feat-okx">
+      <span class="feat-tag" data-pt="Corretora parceira" data-en="Partner exchange">Corretora parceira</span>
+      <div class="feat-icon"><span class="okx-mark">OKX</span></div>
+      <div class="feat-title" data-pt="Opere na OKX comigo" data-en="Trade on OKX with me">Opere na OKX comigo</div>
+      <div class="feat-desc" data-pt="A corretora onde eu opero. Abra sua conta pelo meu link e faça parte da comunidade." data-en="The exchange I trade on. Open your account through my link and join the community.">A corretora onde eu opero. Abra sua conta pelo meu link e faça parte da comunidade.</div>
+      <span class="feat-cta" data-pt="Abrir conta na OKX →" data-en="Open an OKX account →">Abrir conta na OKX →</span>
+    </a>
+
+  </div>
+
+  <div class="more-label" data-pt="Mais ferramentas" data-en="More tools">Mais ferramentas</div>
+
   <!-- Product cards -->
   <div class="products">
-
-    <!-- SMC -->
-    <a href="https://engine.abdallacrypto.com/" target="_blank" class="product-card" style="text-decoration:none;color:inherit;cursor:pointer">
-      <div class="product-emoji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 5-8"/></svg></div>
-      <div class="product-body">
-        <div class="product-title">SMC Execution Engine</div>
-        <div class="product-desc" data-pt="Indicador profissional para TradingView" data-en="Professional indicator for TradingView">Indicador profissional para TradingView</div>
-      </div>
-      <div class="product-chevron">→</div>
-    </a>
 
     <!-- RiskCalc -->
     <a href="https://risk.abdallacrypto.com/" target="_blank" class="product-card" style="text-decoration:none;color:inherit;cursor:pointer">

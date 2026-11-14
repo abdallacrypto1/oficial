@@ -2,651 +2,351 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>@abdallacrypto — Premium Tools for Traders</title>
-<meta name="description" content="Ferramentas premium para traders: SMC Engine PRO, conta na OKX, RiskCalc, Painel MTF e CryptoReports. Por @abdallacrypto.">
-<meta property="og:title" content="@abdallacrypto — Premium Tools for Traders">
-<meta property="og:description" content="Ferramentas premium para traders: SMC Engine PRO, conta na OKX, RiskCalc, Painel MTF e CryptoReports.">
-<meta property="og:image" content="https://abdallacrypto.com/avatar.jpg">
-<meta property="og:url" content="https://abdallacrypto.com">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>@abdallacrypto · Ferramentas para traders</title>
+<meta name="description" content="Ferramentas para traders: SMC Engine PRO, conta na OKX, RiskCalc, Painel MTF e CryptoReports. Por @abdallacrypto.">
+<link rel="canonical" href="https://abdallacrypto.com/">
 <meta property="og:type" content="website">
+<meta property="og:title" content="@abdallacrypto · Ferramentas para traders">
+<meta property="og:description" content="Ferramentas para traders: SMC Engine PRO, conta na OKX, RiskCalc, Painel MTF e CryptoReports. Por @abdallacrypto.">
+<meta property="og:image" content="https://abdallacrypto.com/avatar.jpg">
+<meta property="og:url" content="https://abdallacrypto.com/">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23080808'/><text x='50' y='68' text-anchor='middle' font-size='56' fill='%2300d4aa'>A</text></svg>">
+<meta name="twitter:image" content="https://abdallacrypto.com/avatar.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --teal: #00d4aa;
-    --teal-dim: rgba(0,212,170,0.10);
-    --teal-border: rgba(0,212,170,0.30);
-    --bg: #080808;
-    --bg-card: #0f0f0f;
-    --bg-card2: #141414;
-    --text: #e8e8e8;
-    --text-muted: #5a5a5a;
-    --text-dim: #888;
-    --mono: 'IBM Plex Mono', monospace;
-    --sans: 'DM Sans', sans-serif;
-    --divider: rgba(255,255,255,0.07);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
-
-  /* noise */
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 0; opacity: 0.5;
-  }
-
-  .page {
-    position: relative; z-index: 1;
-    max-width: 520px;
-    margin: 0 auto;
-    padding: 56px 24px 80px;
-  }
-
-  /* ── Status row ── */
-  .status-row {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 44px;
-    opacity: 0; animation: up 0.6s ease 0.05s forwards;
-  }
-
-  /* ── Status ── */
-  .status {
-    display: flex; align-items: center; gap: 8px;
-    font-family: var(--mono); font-size: 11px;
-    letter-spacing: 0.15em; color: var(--teal);
-    text-transform: uppercase;
-  }
-
-  .status-dot {
-    width: 7px; height: 7px;
-    background: var(--teal); border-radius: 1px;
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  /* ── Profile ── */
-  .profile {
-    margin-bottom: 52px;
-    opacity: 0; animation: up 0.6s ease 0.15s forwards;
-  }
-
-  .avatar {
-    width: 72px; height: 72px; border-radius: 50%;
-    border: 2px solid var(--teal);
-    overflow: hidden; margin-bottom: 22px;
-  }
-
-  .avatar img {
-    width: 100%; height: 100%; object-fit: cover;
-    object-position: center 20%;
-    filter: brightness(1.2) contrast(1.1);
-    transition: filter 0.3s, transform 0.3s;
-  }
-
-  .avatar:hover img {
-    filter: grayscale(0%);
-    transform: scale(1.05);
-  }
-
-  .handle {
-    font-family: var(--mono); font-size: 13px;
-    letter-spacing: 0.18em; color: var(--teal);
-    text-transform: uppercase; margin-bottom: 12px;
-  }
-
-  .hero-title {
-    font-family: var(--mono);
-    font-size: clamp(40px, 9vw, 56px);
-    font-weight: 700; line-height: 1.0;
-    letter-spacing: -0.02em; color: #fff;
-  }
-
-  .hero-title span { color: var(--teal); display: block; }
-
-  .hero-title span {
-    text-shadow: 0 0 40px rgba(0,212,170,0.25), 0 0 80px rgba(0,212,170,0.10);
-  }
-
-  .hero-sub {
-    font-size: 17px; color: var(--text-dim);
-    line-height: 1.7; margin-top: 18px;
-    border-left: 2px solid var(--teal-border);
-    padding-left: 14px;
-    font-family: var(--mono);
-  }
-
-  /* ── Product cards (home) ── */
-  .products {
-    display: flex; flex-direction: column; gap: 10px;
-    margin-bottom: 0;
-    opacity: 0; animation: up 0.6s ease 0.25s forwards;
-  }
-
-  .product-card {
-    display: flex; align-items: center; gap: 16px;
-    padding: 20px 20px;
-    background: var(--bg-card);
-    border: 1px solid var(--divider);
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative; overflow: hidden;
-    transition: border-color 0.2s, background 0.2s;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .product-card::before {
-    content: '';
-    position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
-    background: var(--teal);
-    transform: scaleY(0); transform-origin: bottom;
-    transition: transform 0.25s ease;
-  }
-
-  .product-card:hover {
-    border-color: var(--teal-border);
-    background: var(--bg-card2);
-    box-shadow: 0 4px 24px rgba(0,212,170,0.06);
-  }
-
-  .product-card:hover::before { transform: scaleY(1); }
-
-  .product-card.open .product-title { color: var(--teal); }
-
-  .product-emoji {
-    font-size: 24px; flex-shrink: 0;
-    width: 44px; text-align: center;
-  }
-
-  .product-body { flex: 1; min-width: 0; }
-
-  .product-title {
-    font-family: var(--mono); font-size: 15px;
-    font-weight: 600; color: var(--text);
-    margin-bottom: 4px;
-    transition: color 0.2s;
-  }
-
-  .product-desc {
-    font-size: 13px; color: #999;
-    line-height: 1.4;
-  }
-
-  .product-chevron {
-    font-family: var(--mono); font-size: 13px;
-    color: var(--text-muted); flex-shrink: 0;
-    transition: transform 0.3s ease, color 0.2s;
-  }
-
-  .product-card.open .product-chevron {
-    transform: rotate(90deg);
-    color: var(--teal);
-  }
-
-  /* ── Destaques (SMC Engine + OKX) ── */
-  .featured {
-    display: flex; flex-direction: column; gap: 12px;
-    margin-bottom: 30px;
-    opacity: 0; animation: up 0.6s ease 0.22s forwards;
-  }
-  .feat-card {
-    display: block; position: relative; overflow: hidden;
-    padding: 24px 22px 22px;
-    background: linear-gradient(180deg, rgba(0,212,170,0.08), rgba(0,212,170,0.02));
-    border: 1px solid var(--teal-border); border-radius: 6px;
-    text-decoration: none; color: inherit;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  }
-  .feat-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--teal);
-    box-shadow: 0 8px 32px rgba(0,212,170,0.16);
-  }
-  .feat-tag {
-    display: inline-block;
-    font-family: var(--mono); font-size: 10px; font-weight: 700;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--teal); background: rgba(0,212,170,0.10);
-    border: 1px solid var(--teal-border); border-radius: 3px;
-    padding: 3px 8px; margin-bottom: 14px;
-  }
-  .feat-icon { position: absolute; top: 20px; right: 20px; }
-  .feat-title {
-    font-family: var(--mono); font-size: 23px; font-weight: 700;
-    color: #fff; line-height: 1.15; margin-bottom: 8px;
-    padding-right: 56px;
-  }
-  .feat-desc {
-    font-size: 14px; color: var(--text-dim); line-height: 1.55;
-    margin-bottom: 18px;
-  }
-  .feat-cta {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-family: var(--mono); font-size: 13px; font-weight: 700;
-    letter-spacing: 0.06em; text-transform: uppercase;
-    color: #06100e; background: var(--teal);
-    border-radius: 4px; padding: 11px 16px;
-    box-shadow: 0 0 18px rgba(0,212,170,0.25);
-    transition: box-shadow 0.2s;
-  }
-  .feat-card:hover .feat-cta { box-shadow: 0 0 28px rgba(0,212,170,0.45); }
-
-  .feat-okx {
-    background: linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.015));
-    border-color: rgba(255,255,255,0.22);
-  }
-  .feat-okx:hover { border-color: rgba(255,255,255,0.55); box-shadow: 0 8px 32px rgba(255,255,255,0.08); }
-  .feat-okx .feat-tag { color: #fff; background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.22); }
-  .feat-okx .feat-cta { color: #000; background: #fff; box-shadow: 0 0 18px rgba(255,255,255,0.14); }
-  .feat-okx:hover .feat-cta { box-shadow: 0 0 28px rgba(255,255,255,0.28); }
-  .okx-mark {
-    font-family: var(--mono); font-size: 18px; font-weight: 700;
-    letter-spacing: 0.08em; color: #fff;
-  }
-
-  .more-label {
-    font-family: var(--mono); font-size: 10px;
-    letter-spacing: 0.18em; text-transform: uppercase;
-    color: var(--text-muted); margin: 0 0 10px 2px;
-    opacity: 0; animation: up 0.6s ease 0.25s forwards;
-  }
-  .products .product-card { padding: 14px 16px; }
-  .products .product-title { font-size: 14px; }
-  .products .product-desc { font-size: 12px; }
-
-  /* ── Expandable sections ── */
-  .section-wrap {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
-  }
-
-  .section-wrap.open {
-    max-height: 1200px;
-  }
-
-  .section-inner {
-    padding: 6px 0 20px;
-    display: flex; flex-direction: column; gap: 8px;
-  }
-
-  /* ── Link cards ── */
-  .link-card {
-    display: flex; align-items: center; gap: 14px;
-    padding: 16px 18px;
-    background: var(--bg);
-    border: 1px solid var(--divider);
-    border-radius: 4px;
-    text-decoration: none; color: var(--text);
-    position: relative; overflow: hidden;
-    transition: border-color 0.2s, background 0.2s, transform 0.18s;
-  }
-
-  .link-card::before {
-    content: '';
-    position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
-    background: var(--teal);
-    transform: scaleY(0); transform-origin: bottom;
-    transition: transform 0.25s ease;
-  }
-
-  .link-card:hover {
-    border-color: var(--teal-border);
-    background: var(--bg-card);
-    transform: translateX(4px);
-    box-shadow: 0 2px 16px rgba(0,212,170,0.06);
-  }
-
-  .link-card:hover::before { transform: scaleY(1); }
-
-  .link-card.primary:hover {
-    background: rgba(0,212,170,0.10);
-    border-color: var(--teal-border);
-  }
-
-  .lc-icon {
-    width: 42px; height: 42px; border-radius: 3px;
-    background: var(--bg-card);
-    border: 1px solid var(--divider);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 20px; flex-shrink: 0;
-  }
-
-  .lc-body { flex: 1; min-width: 0; }
-
-  .lc-title {
-    font-family: var(--mono); font-size: 14px;
-    font-weight: 600; color: var(--text);
-    margin-bottom: 3px; line-height: 1.3;
-  }
-
-  .lc-desc {
-    font-size: 13px; color: #999;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  }
-
-  .lc-arrow {
-    font-family: var(--mono); font-size: 13px;
-    color: var(--text-muted); flex-shrink: 0;
-    transition: color 0.2s, transform 0.18s;
-  }
-
-  .link-card:hover .lc-arrow { color: var(--teal); transform: translateX(3px); }
-
-  /* ── Instagram ── */
-  .ig-btn {
-    display: flex; align-items: center; justify-content: center; gap: 9px;
-    padding: 15px;
-    background: var(--bg-card);
-    border: 1px solid var(--divider); border-radius: 4px;
-    text-decoration: none;
-    font-family: var(--mono); font-size: 13px;
-    letter-spacing: 0.08em; color: var(--text-muted);
-    margin-top: 32px;
-    transition: all 0.22s;
-    opacity: 0; animation: up 0.6s ease 0.35s forwards;
-  }
-
-  .ig-btn:hover {
-    border-color: var(--teal-border);
-    color: var(--teal); background: var(--teal-dim);
-  }
-
-  /* ── Footer ── */
-  footer {
-    margin-top: 48px; text-align: center;
-    opacity: 0; animation: up 0.6s ease 0.45s forwards;
-  }
-
-  footer p {
-    font-family: var(--mono); font-size: 10px;
-    letter-spacing: 0.16em; color: var(--text-muted);
-    text-transform: uppercase;
-  }
-
-  footer span { color: var(--teal); }
-
-  .footer-line {
-    width: 40px; height: 1px;
-    background: var(--teal-border);
-    margin: 0 auto 16px;
-  }
-
-  .footer-copy {
-    margin-top: 6px;
-    font-family: var(--mono); font-size: 9px;
-    letter-spacing: 0.14em; color: var(--text-muted);
-    text-transform: uppercase;
-  }
-
-  /* ── Animations ── */
-  @keyframes up {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-
-  /* ── Lang toggle ── */
-  .lang-toggle {
-    display: flex; align-items: center; gap: 6px;
-  }
-
-  .lang-btn {
-    background: none; border: none; cursor: pointer;
-    font-family: var(--mono); font-size: 11px;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--text-muted); padding: 0;
-    transition: color 0.2s;
-  }
-
-  .lang-btn.active { color: var(--teal); }
-  .lang-btn:hover { color: var(--teal); }
-  .lang-sep { font-family: var(--mono); font-size: 11px; color: var(--text-muted); }
-
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--bg); }
-  ::-webkit-scrollbar-thumb { background: #1c1c1c; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--teal-border); }
-
-  /* ── Store badges ── */
-  .store-badges {
-    display: flex; gap: 10px; align-items: stretch;
-    padding: 14px 4px 6px;
-  }
-
-  .store-badge {
-    flex: 1;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    padding: 10px 14px;
-    background: var(--bg-card);
-    border: 1px solid var(--divider);
-    border-radius: 4px;
-    transition: border-color 0.2s, background 0.2s;
-    gap: 6px;
-  }
-
-  .store-badge:hover {
-    border-color: var(--teal-border);
-    background: var(--teal-dim);
-  }
-
-  .store-badge img {
-    height: 28px; width: auto;
-    display: block;
-    filter: brightness(0.85);
-    transition: filter 0.2s;
-  }
-
-  .store-badge:hover img {
-    filter: brightness(1);
-  }
-
-
-  .store-badge-soon {
-    flex-direction: column; gap: 6px;
-  }
-
-  .store-soon {
-    font-family: var(--mono); font-size: 10px;
-    letter-spacing: 0.12em; color: var(--text-muted);
-    text-transform: uppercase;
-  }
-
+:root{
+  --bg:#070A09; --surface:#0D1210; --surface-2:#111815; --line:#1B2420; --line-2:#26322C;
+  --text:#E9F0EC; --muted:#93A39B; --faint:#6F7F77;
+  --green:#00E887; --glow:#00FF88; --red:#FF5C6C; --amber:#FFB020;
+  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r-s:10px; --r-m:14px; --r-l:16px;
+  --gut:20px; --max:980px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p{margin:0}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* faixa de prévia */
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;
+  font:600 15.5px/1 var(--sans);letter-spacing:-.005em;text-decoration:none;white-space:nowrap;border:1px solid transparent;
+  transition:transform .18s ease,opacity .18s ease}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--green);color:#03130B;box-shadow:0 0 0 1px rgba(0,255,136,.35),0 10px 34px -10px rgba(0,255,136,.55)}
+.btn-ghost{background:rgba(233,240,236,.04);color:var(--text);border-color:var(--line-2)}
+.btn .arr{transition:transform .18s ease}
+@media (hover:hover){.btn:hover{transform:translateY(-1px)}.btn:hover .arr{transform:translateX(3px)}}
+.lang{min-width:44px;min-height:44px;background:transparent;border:1px solid var(--line-2);border-radius:10px;color:var(--muted);font:500 12.5px/1 var(--mono);letter-spacing:.06em;cursor:pointer}
+.hub{position:relative;padding:20px 0 40px}
+.hub::before{content:"";position:absolute;inset:0 0 auto 0;height:520px;pointer-events:none;
+  background:radial-gradient(60% 60% at 50% 0,rgba(0,255,136,.08),transparent 70%),
+    linear-gradient(var(--line) 1px,transparent 1px) 0 0/100% 56px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/56px 100%;
+  opacity:.5;-webkit-mask-image:radial-gradient(90% 90% at 50% 0,#000 10%,transparent 80%);mask-image:radial-gradient(90% 90% at 50% 0,#000 10%,transparent 80%)}
+.hub .wrap{position:relative}
+/* perfil */
+.me{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
+.me img{width:60px;height:60px;border-radius:50%;border:1.5px solid var(--green);box-shadow:0 0 0 4px rgba(0,232,135,.08)}
+.me .who{min-width:0}
+.me .handle{font:500 12.5px/1 var(--mono);letter-spacing:.06em;color:var(--green)}
+.me h1{margin-top:6px;font-size:22px;line-height:1.1;letter-spacing:-.03em;font-weight:600}
+.tagline{margin-top:14px;color:var(--muted);font-size:15.5px;max-width:34em}
+.cols{margin-top:20px;display:grid;gap:12px}
+.side{display:grid;gap:12px;align-content:start}
+.eyebrow{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.eyebrow.n{color:var(--muted)}
+
+/* card principal */
+.feat{position:relative;border:1px solid var(--line-2);border-radius:var(--r-l);overflow:hidden;
+  background:radial-gradient(120% 80% at 100% 0,rgba(0,255,136,.10),transparent 60%),var(--surface);
+  box-shadow:0 40px 90px -50px rgba(0,255,136,.3)}
+.feat-top{display:flex;align-items:center;gap:10px;height:38px;padding:0 12px 0 14px;border-bottom:1px solid var(--line);font:500 11px/1 var(--mono);color:var(--muted);white-space:nowrap}
+.feat-top .sym{color:var(--text)}
+.chip{margin-left:auto;display:inline-flex;align-items:center;height:22px;padding:0 8px;border:1px dashed rgba(255,176,32,.5);border-radius:999px;color:var(--amber);font:500 10px/1 var(--mono);letter-spacing:.04em}
+.feat svg.chart{width:100%;height:auto;aspect-ratio:640/400;border-bottom:1px solid #2A2E39}
+.feat-top{background:#161A25;border-bottom-color:#2A2E39}
+.chart text{font-family:var(--mono)}
+.feat-b{padding:18px 18px 20px}
+.feat h2{margin-top:10px;display:flex;align-items:center;gap:9px;font-size:26px;line-height:1.1;letter-spacing:-.035em;font-weight:600}
+.feat h2 .pro{font:600 10px/1 var(--mono);letter-spacing:.12em;color:var(--green);border:1px solid rgba(0,232,135,.4);border-radius:5px;padding:3px 5px}
+.feat p{margin-top:8px;color:var(--muted);font-size:15px;line-height:1.5;max-width:34em}
+.feat .cta{margin-top:16px;display:grid;gap:10px}
+.feat .fine{margin-top:12px;font:400 11.5px/1.4 var(--mono);color:var(--faint)}
+@media (min-width:520px){.feat .cta{display:flex;flex-wrap:wrap}.feat .cta .btn{flex:1 1 210px}}
+
+/* animação do mini gráfico (estado final é o padrão) */
+@keyframes in{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes grow{from{opacity:0;transform:scaleX(0)}to{opacity:1;transform:none}}
+@keyframes ping{0%{opacity:.9;transform:scale(.4)}100%{opacity:0;transform:scale(3.2)}}
+.chart .ping{opacity:0;transform-box:fill-box;transform-origin:center}
+.anim .s{opacity:0;animation:in .28s ease-out var(--d) forwards}
+.anim .s.k{animation-name:rise;animation-duration:.22s}
+.anim .s.g{transform-box:fill-box;transform-origin:left center;animation-name:grow;animation-duration:.6s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+.anim .ping{animation:ping 1.4s ease-out var(--d) 3}
+.cw{position:relative}
+.sig{position:absolute;left:10px;bottom:9px;max-width:calc(100% - 20px);display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 9px;padding:7px 10px;background:rgba(22,30,26,.95);border:1px solid var(--line-2);border-radius:10px;box-shadow:0 10px 30px -12px #000;font-size:11.5px;line-height:1.25}
+.sig b{font-weight:600;white-space:nowrap}
+.sig small{font:400 10.5px/1.25 var(--mono);color:var(--muted);white-space:nowrap}
+.anim .sig{opacity:0;animation:rise .4s cubic-bezier(.2,.8,.2,1) 4.7s forwards}
+.feat .layer,.feat .sig{transition:opacity .45s ease}
+.feat.fade .layer,.feat.fade .sig{opacity:0!important}
+
+/* OKX + ferramentas */
+.okx{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:start;padding:18px;border:1px solid var(--line);border-radius:var(--r-l);background:var(--surface);text-decoration:none;transition:transform .18s ease}
+.okx .mark{grid-row:1/3;grid-column:2;font:700 15px/1 var(--mono);letter-spacing:.04em;color:var(--text);border:1px solid var(--line-2);border-radius:8px;padding:8px 9px}
+.okx h2{margin-top:8px;font-size:19px;line-height:1.2;letter-spacing:-.02em;font-weight:600}
+.okx p{grid-column:1/-1;color:var(--muted);font-size:14.5px;line-height:1.5}
+.okx .go{grid-column:1/-1;margin-top:6px;display:flex;align-items:center;gap:6px;min-height:44px;font-weight:500;font-size:14.5px;color:var(--text);text-decoration:none}
+.okx .have{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;line-height:1.45;text-decoration:none}
+.okx .have b{color:var(--text);font-weight:500}
+.okx .hl{color:var(--green);font-weight:600}
+.more{margin-top:10px;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tools{border:1px solid var(--line);border-radius:var(--r-l);background:var(--surface);overflow:hidden}
+.tool{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:center;min-height:68px;padding:12px 16px;text-decoration:none;transition:opacity .18s ease}
+.tools>*+*{border-top:1px solid var(--line)}
+.tool .ic{width:36px;height:36px;border-radius:9px;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--green)}
+.tool b{display:block;font-weight:500;font-size:15px;line-height:1.25}
+.tool small{display:block;margin-top:2px;color:var(--muted);font-size:13px;line-height:1.35}
+.tool .tag{font:600 9.5px/1 var(--mono);letter-spacing:.08em;color:var(--green);border:1px solid rgba(0,232,135,.35);border-radius:4px;padding:3px 5px}
+.tool .chev{color:var(--faint);transition:transform .18s ease}
+details.cr summary{list-style:none;cursor:pointer}
+details.cr summary::-webkit-details-marker{display:none}
+details.cr[open] .chev{transform:rotate(90deg)}
+.cr-in{padding:2px 16px 16px;display:grid;gap:8px}
+.cr-in .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cr-in a{display:flex;align-items:center;gap:9px;min-height:46px;padding:0 13px;border:1px solid var(--line-2);border-radius:10px;text-decoration:none;font-size:14px;font-weight:500}
+.cr-in a small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.cr-in a.v{min-height:56px;padding:10px 13px;line-height:1.35}
+.ig{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border:1px solid var(--line-2);border-radius:12px;text-decoration:none;font-weight:500;font-size:15px;background:rgba(233,240,236,.03)}
+@media (hover:hover){.okx:hover{transform:translateY(-1px)}.tool:hover{background:rgba(233,240,236,.025)}}
+
+.footer{border-top:1px solid var(--line);padding:26px 0 36px;color:var(--muted);font-size:12.5px;line-height:1.6}
+.footer p+p{margin-top:8px}
+.footer strong{color:var(--text);font-weight:500}
+@media (min-width:900px){
+  .hub{padding:56px 0 80px}
+  .me img{width:72px;height:72px}
+  .me h1{font-size:34px}
+  .tagline{font-size:17.5px;margin-top:18px}
+  .cols{margin-top:32px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+  .side{gap:14px}
+  .feat-b{padding:26px 28px 28px}
+  .feat h2{font-size:32px}
+  .feat p{font-size:16.5px}
+}
+@media (prefers-reduced-motion:reduce){
+  .anim .s,.anim .ping,.anim .sig{opacity:1!important;animation:none!important}
+  .anim .ping{opacity:0!important}
+  .btn,.btn .arr,.tool,.feat{transition:none}
+}
 </style>
 </head>
 <body>
-<div class="page">
 
-  <!-- Status + Lang toggle -->
-  <div class="status-row">
-    <div class="status">
-      <div class="status-dot"></div>
-      <span data-pt="Sistema Online" data-en="System Online">Sistema Online</span>
-    </div>
-    <div class="lang-toggle">
-      <button onclick="setLang('pt')" id="btn-pt" class="lang-btn active">PT</button>
-      <span class="lang-sep">|</span>
-      <button onclick="setLang('en')" id="btn-en" class="lang-btn">EN</button>
-    </div>
-  </div>
+<a class="sr" href="#conteudo" data-pt="Pular para o conteúdo" data-en="Skip to content">Pular para o conteúdo</a>
 
-  <!-- Profile -->
-  <div class="profile">
-    <div class="avatar">
-      <img src="avatar.jpg" alt="@abdallacrypto">
-    </div>
-    <div class="handle">@abdallacrypto</div>
-    <h1 class="hero-title">PREMIUM<br>TOOLS FOR<span>TRADERS</span></h1>
-    <p class="hero-sub" data-pt="Tudo que você precisa para operar com mais clareza e consistência." data-en="Everything you need to trade with more clarity and consistency.">Tudo que você precisa para operar com mais clareza e consistência.</p>
-  </div>
 
-  <!-- Destaques -->
-  <div class="featured">
-
-    <a href="https://engine.abdallacrypto.com/" target="_blank" class="feat-card">
-      <span class="feat-tag" data-pt="Produto principal" data-en="Flagship product">Produto principal</span>
-      <div class="feat-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-8 4 4 5-8"/></svg></div>
-      <div class="feat-title">SMC Engine PRO</div>
-      <div class="feat-desc" data-pt="Indicador profissional de Smart Money Concepts para TradingView: estrutura, order blocks e alertas de execução, com backtest público e track record ao vivo." data-en="Professional Smart Money Concepts indicator for TradingView: structure, order blocks and execution alerts, with public backtest and live track record.">Indicador profissional de Smart Money Concepts para TradingView: estrutura, order blocks e alertas de execução, com backtest público e track record ao vivo.</div>
-      <span class="feat-cta" data-pt="Conhecer o indicador →" data-en="See the indicator →">Conhecer o indicador →</span>
-    </a>
-
-    <a href="https://www.okx.com/join/ABDALLACRYPTO" target="_blank" rel="noopener" class="feat-card feat-okx">
-      <span class="feat-tag" data-pt="Corretora parceira" data-en="Partner exchange">Corretora parceira</span>
-      <div class="feat-icon"><span class="okx-mark">OKX</span></div>
-      <div class="feat-title" data-pt="Opere na OKX comigo" data-en="Trade on OKX with me">Opere na OKX comigo</div>
-      <div class="feat-desc" data-pt="A corretora onde eu opero. Abra sua conta pelo meu link e faça parte da comunidade." data-en="The exchange I trade on. Open your account through my link and join the community.">A corretora onde eu opero. Abra sua conta pelo meu link e faça parte da comunidade.</div>
-      <span class="feat-cta" data-pt="Abrir conta na OKX →" data-en="Open an OKX account →">Abrir conta na OKX →</span>
-    </a>
-
-  </div>
-
-  <div class="more-label" data-pt="Mais ferramentas" data-en="More tools">Mais ferramentas</div>
-
-  <!-- Product cards -->
-  <div class="products">
-
-    <!-- RiskCalc -->
-    <a href="https://risk.abdallacrypto.com/" target="_blank" class="product-card" style="text-decoration:none;color:inherit;cursor:pointer">
-      <div class="product-emoji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
-      <div class="product-body" style="padding-right:52px">
-        <div class="product-title" data-pt="RiskCalc: Gerenciamento de Risco" data-en="RiskCalc: Risk Management">RiskCalc: Gerenciamento de Risco</div>
-        <div class="product-desc" data-pt="O tamanho certo da posição, sem fazer conta" data-en="The right position size, no math needed">O tamanho certo da posição, sem fazer conta</div>
+<main id="conteudo" class="hub">
+  <div class="wrap">
+    <header class="me">
+      <img src="avatar-192.jpg" width="72" height="72" alt="Ricardo Abdalla, @abdallacrypto">
+      <div class="who">
+        <div class="handle">@abdallacrypto</div>
+        <h1 data-pt="Ferramentas para traders" data-en="Tools for traders">Ferramentas para traders</h1>
       </div>
-      <span data-pt="GRÁTIS" data-en="FREE" style="position:absolute;top:16px;right:16px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.5px;color:var(--teal);background:rgba(0,212,170,0.08);border:1px solid var(--teal-border);border-radius:3px;padding:2px 6px;line-height:1">GRÁTIS</span>
-      <div class="product-chevron">→</div>
-    </a>
+      <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
+    </header>
+    <p class="tagline" data-pt="Tudo que você precisa para operar com mais clareza e consistência." data-en="Everything you need to trade with more clarity and consistency.">Tudo que você precisa para operar com mais clareza e consistência.</p>
 
-    <!-- Trend HUD -->
-    <a href="https://hud.abdallacrypto.com/" target="_blank" class="product-card" style="text-decoration:none;color:inherit;cursor:pointer">
-      <div class="product-emoji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
-      <div class="product-body" style="padding-right:52px">
-        <div class="product-title" data-pt="Painel de Tendências MTF" data-en="MTF Trend Panel">Painel de Tendências MTF</div>
-        <div class="product-desc" data-pt="Regime + RSI de BTC e principais alts, ao vivo" data-en="SMC regime + RSI, BTC &amp; top alts, live">Regime + RSI de BTC e principais alts, ao vivo</div>
-      </div>
-      <span data-pt="GRÁTIS" data-en="FREE" style="position:absolute;top:16px;right:16px;font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:0.5px;color:var(--teal);background:rgba(0,212,170,0.08);border:1px solid var(--teal-border);border-radius:3px;padding:2px 6px;line-height:1">GRÁTIS</span>
-      <div class="product-chevron">→</div>
-    </a>
+    <div class="cols">
+      <article class="feat" id="feat" aria-labelledby="feat-h">
+        <div class="feat-top"><span class="sym">SMC Engine PRO</span><span class="chip" data-pt="Exemplo ilustrativo" data-en="Illustrative example">Exemplo ilustrativo</span></div>
+<div class="cw">
+<svg class="chart tv" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Exemplo ilustrativo no estilo do TradingView: o preço cai marcando BOS de baixa, faz um CHOCH de alta, o indicador traça Fibonacci de 50%, 61.8% e 79% e o order block, o preço volta à zona, o alerta dispara e o preço segue.">
+<rect x="0" y="0" width="640" height="400" fill="#131722"/>
+<line x1="0" x2="572" y1="289.8" y2="289.8" stroke="#1E222D"/><text x="580" y="293.3" font-size="10" fill="#787B86">67.200</text>
+<line x1="0" x2="572" y1="248.8" y2="248.8" stroke="#1E222D"/><text x="580" y="252.3" font-size="10" fill="#787B86">67.400</text>
+<line x1="0" x2="572" y1="207.9" y2="207.9" stroke="#1E222D"/><text x="580" y="211.4" font-size="10" fill="#787B86">67.600</text>
+<line x1="0" x2="572" y1="167.0" y2="167.0" stroke="#1E222D"/><text x="580" y="170.5" font-size="10" fill="#787B86">67.800</text>
+<line x1="0" x2="572" y1="126.1" y2="126.1" stroke="#1E222D"/><text x="580" y="129.6" font-size="10" fill="#787B86">68.000</text>
+<line x1="0" x2="572" y1="85.2" y2="85.2" stroke="#1E222D"/><text x="580" y="88.7" font-size="10" fill="#787B86">68.200</text>
+<line x1="54.1" x2="54.1" y1="26" y2="360" stroke="#1E222D"/><text x="54.1" y="380" font-size="10" fill="#787B86" text-anchor="middle">09:00</text>
+<line x1="139.5" x2="139.5" y1="26" y2="360" stroke="#1E222D"/><text x="139.5" y="380" font-size="10" fill="#787B86" text-anchor="middle">11:00</text>
+<line x1="225.0" x2="225.0" y1="26" y2="360" stroke="#1E222D"/><text x="225.0" y="380" font-size="10" fill="#787B86" text-anchor="middle">13:00</text>
+<line x1="310.4" x2="310.4" y1="26" y2="360" stroke="#1E222D"/><text x="310.4" y="380" font-size="10" fill="#787B86" text-anchor="middle">15:00</text>
+<line x1="395.9" x2="395.9" y1="26" y2="360" stroke="#1E222D"/><text x="395.9" y="380" font-size="10" fill="#787B86" text-anchor="middle">17:00</text>
+<line x1="0" x2="640" y1="364" y2="364" stroke="#2A2E39"/><line x1="572" x2="572" y1="0" y2="364" stroke="#2A2E39"/>
+<text x="10" y="17" font-size="10.5" fill="#D1D4DC">BTCUSDT.P · 15 · OKX<tspan fill="#787B86" dx="8">O</tspan><tspan fill="#26A69A">68.290</tspan><tspan fill="#787B86" dx="5">H</tspan><tspan fill="#26A69A">68.362</tspan><tspan fill="#787B86" dx="5">L</tspan><tspan fill="#26A69A">68.265</tspan><tspan fill="#787B86" dx="5">C</tspan><tspan fill="#26A69A">68.350</tspan></text>
+<g class="layer">
+<g class="s k" style="--d:0.15s"><path d="M11.3 57.9V75.5" stroke="#EF5350"/><rect x="7.7" y="64.7" width="7.3" height="8.2" fill="#EF5350"/><rect x="7.7" y="337.8" width="7.3" height="22.2" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.20s"><path d="M22.0 68.2V92.5" stroke="#EF5350"/><rect x="18.4" y="72.9" width="7.3" height="14.3" fill="#EF5350"/><rect x="18.4" y="335.6" width="7.3" height="24.4" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.25s"><path d="M32.7 76.4V91.7" stroke="#26A69A"/><rect x="29.1" y="79.0" width="7.3" height="8.2" fill="#26A69A"/><rect x="29.1" y="345.0" width="7.3" height="15.0" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:0.30s"><path d="M43.4 73.5V113.0" stroke="#EF5350"/><rect x="39.8" y="79.0" width="7.3" height="30.7" fill="#EF5350"/><rect x="39.8" y="318.7" width="7.3" height="41.3" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.35s"><path d="M54.1 107.5V140.4" stroke="#EF5350"/><rect x="50.5" y="109.7" width="7.3" height="24.6" fill="#EF5350"/><rect x="50.5" y="330.0" width="7.3" height="30.0" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.40s"><path d="M64.8 115.0V136.9" stroke="#26A69A"/><rect x="61.1" y="122.0" width="7.3" height="12.3" fill="#26A69A"/><rect x="61.1" y="333.6" width="7.3" height="26.4" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:0.45s"><path d="M75.4 107.7V126.1" stroke="#26A69A"/><rect x="71.8" y="113.8" width="7.3" height="8.2" fill="#26A69A"/><rect x="71.8" y="344.0" width="7.3" height="16.0" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:0.50s"><path d="M86.1 107.9V135.2" stroke="#EF5350"/><rect x="82.4" y="113.8" width="7.3" height="16.4" fill="#EF5350"/><rect x="82.4" y="331.6" width="7.3" height="28.4" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.55s"><path d="M96.8 124.6V160.7" stroke="#EF5350"/><rect x="93.1" y="130.2" width="7.3" height="24.5" fill="#EF5350"/><rect x="93.1" y="324.3" width="7.3" height="35.7" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.60s"><path d="M107.5 148.9V177.8" stroke="#EF5350"/><rect x="103.8" y="154.7" width="7.3" height="20.5" fill="#EF5350"/><rect x="103.8" y="327.8" width="7.3" height="32.2" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.65s"><path d="M118.2 172.2V201.8" stroke="#EF5350"/><rect x="114.5" y="175.2" width="7.3" height="20.4" fill="#EF5350"/><rect x="114.5" y="332.7" width="7.3" height="27.3" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.70s"><path d="M128.8 177.1V200.9" stroke="#26A69A"/><rect x="125.2" y="183.4" width="7.3" height="12.2" fill="#26A69A"/><rect x="125.2" y="334.9" width="7.3" height="25.1" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:0.75s"><path d="M139.5 171.1V189.6" stroke="#26A69A"/><rect x="135.8" y="177.2" width="7.3" height="6.2" fill="#26A69A"/><rect x="135.8" y="342.9" width="7.3" height="17.1" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:0.80s"><path d="M150.2 169.7V196.0" stroke="#EF5350"/><rect x="146.5" y="177.2" width="7.3" height="12.3" fill="#EF5350"/><rect x="146.5" y="332.7" width="7.3" height="27.3" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.85s"><path d="M160.9 182.1V218.5" stroke="#EF5350"/><rect x="157.2" y="189.5" width="7.3" height="26.6" fill="#EF5350"/><rect x="157.2" y="319.4" width="7.3" height="40.6" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.90s"><path d="M171.6 211.7V245.3" stroke="#EF5350"/><rect x="167.9" y="216.1" width="7.3" height="24.6" fill="#EF5350"/><rect x="167.9" y="326.3" width="7.3" height="33.7" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:0.95s"><path d="M182.2 232.9V269.3" stroke="#EF5350"/><rect x="178.5" y="240.7" width="7.3" height="22.5" fill="#EF5350"/><rect x="178.5" y="322.6" width="7.3" height="37.4" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:1.00s"><path d="M192.9 259.1V283.6" stroke="#EF5350"/><rect x="189.2" y="263.2" width="7.3" height="8.2" fill="#EF5350"/><rect x="189.2" y="338.8" width="7.3" height="21.2" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:1.50s"><path d="M203.6 242.6V248.8" stroke="#26A69A"/><rect x="199.9" y="244.8" width="7.3" height="26.6" fill="#26A69A"/><rect x="199.9" y="328.3" width="7.3" height="31.7" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:1.58s"><path d="M214.3 210.2V248.8" stroke="#26A69A"/><rect x="210.7" y="216.1" width="7.3" height="28.7" fill="#26A69A"/><rect x="210.7" y="319.9" width="7.3" height="40.1" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:1.66s"><path d="M225.0 180.0V219.3" stroke="#26A69A"/><rect x="221.3" y="187.5" width="7.3" height="28.6" fill="#26A69A"/><rect x="221.3" y="317.2" width="7.3" height="42.8" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:1.74s"><path d="M235.7 155.9V194.9" stroke="#26A69A"/><rect x="232.0" y="158.8" width="7.3" height="28.7" fill="#26A69A"/><rect x="232.0" y="325.0" width="7.3" height="35.0" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:1.82s"><path d="M246.3 141.5V161.7" stroke="#26A69A"/><rect x="242.7" y="144.5" width="7.3" height="14.3" fill="#26A69A"/><rect x="242.7" y="338.6" width="7.3" height="21.4" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:1.90s"><path d="M257.0 136.3V148.8" stroke="#26A69A"/><rect x="253.3" y="140.4" width="7.3" height="4.1" fill="#26A69A"/><rect x="253.3" y="344.7" width="7.3" height="15.3" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:3.50s"><path d="M267.7 137.1V160.2" stroke="#EF5350"/><rect x="264.1" y="140.4" width="7.3" height="16.4" fill="#EF5350"/><rect x="264.1" y="336.1" width="7.3" height="23.9" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:3.62s"><path d="M278.4 151.8V181.9" stroke="#EF5350"/><rect x="274.8" y="156.8" width="7.3" height="18.4" fill="#EF5350"/><rect x="274.8" y="331.3" width="7.3" height="28.7" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:3.74s"><path d="M289.1 162.5V178.2" stroke="#26A69A"/><rect x="285.5" y="167.0" width="7.3" height="8.2" fill="#26A69A"/><rect x="285.5" y="341.8" width="7.3" height="18.2" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:3.86s"><path d="M299.7 163.7V197.3" stroke="#EF5350"/><rect x="296.1" y="167.0" width="7.3" height="24.6" fill="#EF5350"/><rect x="296.1" y="328.2" width="7.3" height="31.8" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:3.98s"><path d="M310.4 189.1V218.9" stroke="#EF5350"/><rect x="306.8" y="191.6" width="7.3" height="20.4" fill="#EF5350"/><rect x="306.8" y="333.6" width="7.3" height="26.4" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:4.10s"><path d="M321.1 200.7V215.5" stroke="#26A69A"/><rect x="317.5" y="205.9" width="7.3" height="6.1" fill="#26A69A"/><rect x="317.5" y="342.6" width="7.3" height="17.4" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:4.22s"><path d="M331.8 200.0V234.1" stroke="#EF5350"/><rect x="328.2" y="205.9" width="7.3" height="22.5" fill="#EF5350"/><rect x="328.2" y="325.8" width="7.3" height="34.2" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:4.34s"><path d="M342.5 225.3V254.0" stroke="#EF5350"/><rect x="338.9" y="228.4" width="7.3" height="22.1" fill="#EF5350"/><rect x="338.9" y="330.4" width="7.3" height="29.6" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:5.80s"><path d="M353.2 231.1V255.6" stroke="#26A69A"/><rect x="349.6" y="234.5" width="7.3" height="16.0" fill="#26A69A"/><rect x="349.6" y="336.2" width="7.3" height="23.8" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:5.94s"><path d="M363.8 203.4V240.6" stroke="#26A69A"/><rect x="360.2" y="210.0" width="7.3" height="24.5" fill="#26A69A"/><rect x="360.2" y="322.7" width="7.3" height="37.3" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:6.08s"><path d="M374.5 206.8V219.0" stroke="#EF5350"/><rect x="370.9" y="210.0" width="7.3" height="6.1" fill="#EF5350"/><rect x="370.9" y="346.0" width="7.3" height="14.0" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:6.22s"><path d="M385.2 183.8V218.7" stroke="#26A69A"/><rect x="381.6" y="187.5" width="7.3" height="28.6" fill="#26A69A"/><rect x="381.6" y="323.8" width="7.3" height="36.2" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:6.36s"><path d="M395.9 157.9V190.0" stroke="#26A69A"/><rect x="392.2" y="160.9" width="7.3" height="26.6" fill="#26A69A"/><rect x="392.2" y="326.8" width="7.3" height="33.2" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:6.50s"><path d="M406.6 157.8V170.2" stroke="#EF5350"/><rect x="403.0" y="160.9" width="7.3" height="6.1" fill="#EF5350"/><rect x="403.0" y="346.2" width="7.3" height="13.8" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:6.64s"><path d="M417.2 131.5V175.1" stroke="#26A69A"/><rect x="413.6" y="138.4" width="7.3" height="28.6" fill="#26A69A"/><rect x="413.6" y="318.2" width="7.3" height="41.8" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:6.78s"><path d="M427.9 106.5V144.1" stroke="#26A69A"/><rect x="424.2" y="113.8" width="7.3" height="24.6" fill="#26A69A"/><rect x="424.2" y="321.4" width="7.3" height="38.6" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:6.92s"><path d="M438.6 107.9V127.8" stroke="#EF5350"/><rect x="435.0" y="113.8" width="7.3" height="6.1" fill="#EF5350"/><rect x="435.0" y="341.5" width="7.3" height="18.5" fill="#EF5350" opacity=".45"/></g>
+<g class="s k" style="--d:7.06s"><path d="M449.3 88.0V124.3" stroke="#26A69A"/><rect x="445.7" y="91.3" width="7.3" height="28.6" fill="#26A69A"/><rect x="445.7" y="324.3" width="7.3" height="35.7" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:7.20s"><path d="M460.0 59.0V97.0" stroke="#26A69A"/><rect x="456.4" y="66.7" width="7.3" height="24.6" fill="#26A69A"/><rect x="456.4" y="320.8" width="7.3" height="39.2" fill="#26A69A" opacity=".45"/></g>
+<g class="s k" style="--d:7.34s"><path d="M470.7 51.9V71.8" stroke="#26A69A"/><rect x="467.1" y="54.5" width="7.3" height="12.2" fill="#26A69A"/><rect x="467.1" y="341.2" width="7.3" height="18.8" fill="#26A69A" opacity=".45"/></g>
+<g class="s" style="--d:0.6s"><path d="M54.1 140.4H96.8" stroke="#D1D4DC" stroke-dasharray="2 3"/><text x="75.5" y="151.4" font-size="9.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">BOS</text></g><g class="s" style="--d:0.95s"><path d="M118.2 201.8H160.9" stroke="#D1D4DC" stroke-dasharray="2 3"/><text x="139.6" y="212.8" font-size="9.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">BOS</text></g><g class="s" style="--d:1.8s"><path d="M139.5 171.1H235.7" stroke="#D1D4DC" stroke-dasharray="2 3"/><text x="187.6" y="166.1" font-size="9.5" font-weight="600" fill="#FFFFFF" text-anchor="middle">CHOCH</text></g><path class="s g" style="--d:2.20s" d="M192.9 210.0H568" stroke="#D1D4DC" stroke-opacity=".8"/><text class="s" style="--d:2.50s" x="564" y="206.0" font-size="9" fill="#D1D4DC" text-anchor="end">50%</text><path class="s g" style="--d:2.35s" d="M192.9 227.4H568" stroke="#F7931A" stroke-opacity=".8"/><text class="s" style="--d:2.65s" x="564" y="223.4" font-size="9" fill="#F7931A" text-anchor="end">61.8%</text><path class="s g" style="--d:2.50s" d="M192.9 252.7H568" stroke="#22C55E" stroke-opacity=".8"/><text class="s" style="--d:2.80s" x="564" y="248.7" font-size="9" fill="#22C55E" text-anchor="end">79%</text><rect class="s g" style="--d:2.9s" x="187.6" y="259.1" width="380.4" height="24.5" fill="#26A69A" fill-opacity=".16" stroke="#26A69A" stroke-opacity=".55"/><circle class="ping" style="--d:4.5s" cx="342.5" cy="250.5" r="7" fill="none" stroke="#FFB020" stroke-width="1.5"/><circle class="s" style="--d:4.5s" cx="342.5" cy="250.5" r="3.5" fill="#FFB020" stroke="#131722" stroke-width="1.5"/><g class="s" style="--d:7.5s"><path d="M0 54.5H572" stroke="#26A69A" stroke-dasharray="1 3" stroke-opacity=".7"/><rect x="572" y="46.5" width="68" height="16" fill="#26A69A"/><text x="580" y="58.0" font-size="10" font-weight="600" fill="#fff">68.350</text></g>
+</g>
 
-    <!-- CryptoReports -->
-    <div class="product-card" onclick="toggle('crypto', this)">
-      <div class="product-emoji"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg></div>
-      <div class="product-body">
-        <div class="product-title">CryptoReports</div>
-        <div class="product-desc" data-pt="App de PnL para traders — iOS & Android" data-en="PnL app for traders — iOS & Android">App de PnL para traders — iOS &amp; Android</div>
-      </div>
-      <div class="product-chevron">›</div>
-    </div>
-    <div class="section-wrap" id="crypto">
-      <div class="section-inner">
-        <div class="store-badges">
-          <a href="https://apps.apple.com/br/app/cryptoreports/id6753964217" target="_blank" class="store-badge">
-            <svg height="32" viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg">
-              <rect width="135" height="40" rx="6" fill="#000" stroke="#555" stroke-width="1"/>
-              <text x="38" y="13" fill="#fff" font-family="'DM Sans',sans-serif" font-size="8" letter-spacing="0.3">Download on the</text>
-              <text x="36" y="27" fill="#fff" font-family="'IBM Plex Mono',monospace" font-size="14" font-weight="700" letter-spacing="-0.3">App Store</text>
-              <text x="14" y="26" fill="#fff" font-size="22">&#xf8ff;</text>
-            </svg>
-          </a>
-          <a href="https://play.google.com/store/apps/details?id=com.cryptoreports.app" target="_blank" class="store-badge">
-            <svg height="32" viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg">
-              <rect width="135" height="40" rx="6" fill="#000" stroke="#555" stroke-width="1"/>
-              <text x="38" y="13" fill="#fff" font-family="'DM Sans',sans-serif" font-size="8" letter-spacing="0.3">GET IT ON</text>
-              <text x="36" y="27" fill="#fff" font-family="'IBM Plex Mono',monospace" font-size="14" font-weight="700" letter-spacing="-0.3">Google Play</text>
-              <polygon points="14,12 14,28 23,20" fill="#00d4aa"/>
-            </svg>
-          </a>
-        </div>
-        <a href="https://www.youtube.com/watch?v=qpAZzHGbG0k" target="_blank" class="link-card">
-          <div class="lc-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--teal)" stroke="none"><polygon points="5,3 19,12 5,21"/></svg></div>
-          <div class="lc-body">
-            <div class="lc-title" data-pt="Como ver seu PnL real na Bybit, Binance e Weex" data-en="How to see your real PnL on Bybit, Binance and Weex">Como ver seu PnL real na Bybit, Binance e Weex</div>
-            <div class="lc-desc" data-pt="Com taxas e funding — YouTube" data-en="With fees and funding — YouTube">Com taxas e funding — YouTube</div>
-          </div>
-          <div class="lc-arrow">→</div>
-        </a>
-
-      </div>
-    </div>
-
-  </div><!-- /products -->
-
-  <!-- Instagram -->
-  <a href="https://www.instagram.com/abdallacrypto" target="_blank" class="ig-btn">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="ig1" cx="30%" cy="107%" r="150%">
-          <stop offset="0%" stop-color="#fdf497"/>
-          <stop offset="5%" stop-color="#fdf497"/>
-          <stop offset="45%" stop-color="#fd5949"/>
-          <stop offset="60%" stop-color="#d6249f"/>
-          <stop offset="90%" stop-color="#285AEB"/>
-        </radialGradient>
-      </defs>
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#ig1)"/>
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="0.5"/>
-      <circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="1.5"/>
-      <circle cx="17.5" cy="6.5" r="1" fill="#fff"/>
-    </svg>
-    <span data-pt="@abdallacrypto no Instagram" data-en="@abdallacrypto on Instagram">@abdallacrypto no Instagram</span>
-  </a>
-
-  <footer>
-    <div class="footer-line"></div>
-    <p>built by <span>@abdallacrypto</span> · premium tools for traders</p>
-    <p class="footer-copy">&copy; 2025 abdallacrypto. all rights reserved.</p>
-  </footer>
-
+</svg>
+<div class="sig" role="img" aria-label="Exemplo ilustrativo de alerta do indicador"><b>🎯 ZONA DE ALTA BTCUSDT 15</b><small>Toque na fib 79%</small></div>
 </div>
+        <div class="feat-b">
+          <span class="eyebrow" data-pt="Produto principal" data-en="Flagship product">Produto principal</span>
+          <h2 id="feat-h">SMC Engine <span class="pro">PRO</span></h2>
+          <p data-pt="Indicador de Smart Money Concepts para TradingView. Marca estrutura, zonas de Fibonacci e order blocks no seu gráfico e avisa quando o preço chega na zona." data-en="Smart Money Concepts indicator for TradingView. It maps structure, Fibonacci zones and order blocks on your chart and alerts you when price reaches the zone.">Indicador de Smart Money Concepts para TradingView. Marca estrutura, zonas de Fibonacci e order blocks no seu gráfico e avisa quando o preço chega na zona.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://engine.abdallacrypto.com/"><span data-pt="Conhecer o indicador" data-en="See the indicator">Conhecer o indicador</span><span class="arr" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="https://docs.google.com/forms/d/e/1FAIpQLSfJZb9An-11pox2cJi6Z1oVVvYZM9aCZ06nbtLN07mIFAlHRg/viewform" target="_blank" rel="noopener" data-pt="Testar grátis por 30 dias" data-en="Try free for 30 days">Testar grátis por 30 dias</a>
+          </div>
+          <p class="fine" data-pt="Ferramenta de análise. Não é sinal nem recomendação." data-en="Analysis tool. Not a signal or a recommendation.">Ferramenta de análise. Não é sinal nem recomendação.</p>
+        </div>
+      </article>
+
+      <div class="side">
+        <div class="okx">
+          <span class="eyebrow n" data-pt="Corretora parceira" data-en="Partner exchange">Corretora parceira</span>
+          <span class="mark" aria-hidden="true">OKX</span>
+          <h2 data-pt="Opere na OKX comigo" data-en="Trade on OKX with me">Opere na OKX comigo</h2>
+          <p data-pt="A corretora onde eu opero. Pelo meu link você recebe &lt;b class=&quot;hl&quot;&gt;10% de rebate&lt;/b&gt; nas taxas de trade, abrindo conta nova ou vinculando a que já tem." data-en="The exchange I trade on. Through my link you get a &lt;b class=&quot;hl&quot;&gt;10% rebate&lt;/b&gt; on trading fees, whether you open a new account or link the one you already have.">A corretora onde eu opero. Pelo meu link você recebe <b class="hl">10% de rebate</b> nas taxas de trade, abrindo conta nova ou vinculando a que já tem.</p>
+          <a class="go" href="https://www.okx.com/join/ABDALLACRYPTO" target="_blank" rel="noopener"><span data-pt="Abrir conta na OKX" data-en="Open an OKX account">Abrir conta na OKX</span> <span aria-hidden="true">→</span></a>
+          <a class="have" href="https://okx.com/ul/f1IP61?channelId=46404062&amp;rebindCode=S4MGEPEV" target="_blank" rel="noopener"><span><b data-pt="Já tem conta?" data-en="Already have an account?">Já tem conta?</b> <span data-pt="Vincule a sua pelo meu link" data-en="Link yours through my link">Vincule a sua pelo meu link</span></span> <span aria-hidden="true">→</span></a>
+        </div>
+
+        <h2 class="more" data-pt="Mais ferramentas" data-en="More tools">Mais ferramentas</h2>
+        <div class="tools">
+          <a class="tool" href="https://risk.abdallacrypto.com/">
+            <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <span><b data-pt="RiskCalc: gerenciamento de risco" data-en="RiskCalc: risk management">RiskCalc: gerenciamento de risco</b><small data-pt="O tamanho certo da posição, sem fazer conta" data-en="The right position size, no math needed">O tamanho certo da posição, sem fazer conta</small></span>
+            <span class="tag" data-pt="GRÁTIS" data-en="FREE">GRÁTIS</span>
+          </a>
+          <a class="tool" href="https://hud.abdallacrypto.com/">
+            <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span>
+            <span><b data-pt="Painel de Tendências MTF" data-en="MTF Trend Panel">Painel de Tendências MTF</b><small data-pt="Regime + RSI de BTC e principais alts, ao vivo" data-en="SMC regime + RSI, BTC and top alts, live">Regime + RSI de BTC e principais alts, ao vivo</small></span>
+            <span class="tag" data-pt="GRÁTIS" data-en="FREE">GRÁTIS</span>
+          </a>
+          <details class="cr">
+            <summary class="tool">
+              <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+              <span><b>CryptoReports</b><small data-pt="App de PnL para traders, iOS e Android" data-en="PnL app for traders, iOS and Android">App de PnL para traders, iOS e Android</small></span>
+              <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+            </summary>
+            <div class="cr-in">
+              <div class="row">
+                <a href="https://apps.apple.com/br/app/cryptoreports/id6753964217" target="_blank" rel="noopener" aria-label="CryptoReports na App Store"><span><small data-pt="Baixar na" data-en="Download on the">Baixar na</small>App Store</span></a>
+                <a href="https://play.google.com/store/apps/details?id=com.cryptoreports.app" target="_blank" rel="noopener" aria-label="CryptoReports no Google Play"><span><small data-pt="Disponível no" data-en="Get it on">Disponível no</small>Google Play</span></a>
+              </div>
+              <a class="v" href="https://www.youtube.com/watch?v=qpAZzHGbG0k" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#00E887" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>
+                <span><span data-pt="Como ver seu PnL real na Bybit, Binance e Weex" data-en="How to see your real PnL on Bybit, Binance and Weex">Como ver seu PnL real na Bybit, Binance e Weex</span><small data-pt="Com taxas e funding, no YouTube" data-en="With fees and funding, on YouTube">Com taxas e funding, no YouTube</small></span>
+              </a>
+            </div>
+          </details>
+        </div>
+
+        <a class="ig" href="https://www.instagram.com/abdallacrypto" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>
+          <span data-pt="@abdallacrypto no Instagram" data-en="@abdallacrypto on Instagram">@abdallacrypto no Instagram</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p><strong data-pt="Aviso de risco." data-en="Risk notice.">Aviso de risco.</strong> <span data-pt="Conteúdo e ferramentas de caráter educacional e analítico. Não constituem recomendação de investimento. Operar criptoativos envolve risco de perda; resultados não são garantidos." data-en="Educational and analytical content and tools. Not investment advice. Trading crypto assets involves risk of loss; results are not guaranteed.">Conteúdo e ferramentas de caráter educacional e analítico. Não constituem recomendação de investimento. Operar criptoativos envolve risco de perda; resultados não são garantidos.</span></p>
+    <p data-pt="© 2026 abdallacrypto. Todos os direitos reservados." data-en="© 2026 abdallacrypto. All rights reserved.">© 2026 abdallacrypto. Todos os direitos reservados.</p>
+  </div>
+</footer>
 
 <script>
-  function toggle(id, card) {
-    const wrap = document.getElementById(id);
-    const isOpen = wrap.classList.contains('open');
-    document.querySelectorAll('.section-wrap').forEach(w => w.classList.remove('open'));
-    document.querySelectorAll('.product-card').forEach(c => c.classList.remove('open'));
-    if (!isOpen) {
-      wrap.classList.add('open');
-      card.classList.add('open');
-      setTimeout(() => { card.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
-    }
+(function(){
+  var doc=document.documentElement; doc.classList.add('js');
+  /* idioma: escolha salva, senão o idioma do navegador (como o hub atual) */
+  var saved=null; try{ saved=localStorage.getItem('smc-lang'); }catch(e){}
+  var nav=(navigator.language||'pt').toLowerCase();
+  var lang=saved==='en'||saved==='pt'?saved:(nav.indexOf('pt')===0?'pt':'en');
+  var btn=document.getElementById('lang');
+  function apply(l,save){
+    lang=l; doc.lang=l==='pt'?'pt-BR':'en';
+    var els=document.querySelectorAll('[data-pt]');
+    for(var i=0;i<els.length;i++){ var v=els[i].getAttribute('data-'+l); if(v!==null) els[i].innerHTML=v; }
+    if(btn){ btn.textContent=l==='pt'?'EN':'PT'; btn.setAttribute('aria-label',l==='pt'?'Switch to English':'Mudar para português'); }
+    if(save){ try{ localStorage.setItem('smc-lang',l); }catch(e){} }
   }
+  if(lang==='en') apply('en',false);
+  if(btn) btn.addEventListener('click',function(){ apply(lang==='pt'?'en':'pt',true); });
 
-  function setLang(lang) {
-    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-    document.querySelectorAll('[data-pt]').forEach(el => {
-      el.textContent = el.dataset[lang];
-    });
-    document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    localStorage.setItem('lang', lang);
+  /* mini gráfico: só liga a classe; o estado final já está no HTML */
+  var st=document.getElementById('feat');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!st||reduce) return;
+  var LOOP=12500, timer=null, fadeT=null, visible=true;
+  function play(){
+    clearTimeout(timer); clearTimeout(fadeT);
+    st.classList.remove('anim','fade'); void st.offsetWidth; st.classList.add('anim');
+    timer=setTimeout(function(){
+      if(!visible||document.hidden){ timer=null; return; }
+      st.classList.add('fade'); fadeT=setTimeout(play,480);
+    },LOOP);
   }
-
-  (function () {
-    const saved = localStorage.getItem('lang');
-    const browser = (navigator.language || '').toLowerCase();
-    const lang = saved || (browser.startsWith('pt') ? 'pt' : 'en');
-    setLang(lang);
-  })();
+  play();
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ visible=en[0].isIntersecting; if(visible&&timer===null) play(); },{threshold:.15}).observe(st);
+  }
+  document.addEventListener('visibilitychange',function(){ if(!document.hidden&&visible&&timer===null) play(); });
+})();
 </script>
-
 </body>
 </html>

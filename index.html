@@ -3,96 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>@abdallacrypto · Ferramentas para traders</title>
-<meta name="description" content="Ferramentas para traders: SMC Engine PRO, conta na OKX, RiskCalc, Painel MTF e CryptoReports. Por @abdallacrypto.">
+<title>Ricardo Abdalla (@abdallacrypto) · 16× no Top 500 global da Bybit</title>
+<meta name="description" content="Trader desde 2021, com 16 aparições no Top 500 global de derivativos da Bybit. Criador do SMC Engine PRO, indicador para TradingView. Teste grátis por 30 dias.">
 <link rel="canonical" href="https://abdallacrypto.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="@abdallacrypto · Ferramentas para traders">
-<meta property="og:description" content="Ferramentas para traders: SMC Engine PRO, conta na OKX, RiskCalc, Painel MTF e CryptoReports. Por @abdallacrypto.">
-<meta property="og:image" content="https://abdallacrypto.com/avatar.jpg">
+<meta property="og:title" content="Ricardo Abdalla · 16× no Top 500 global da Bybit">
+<meta property="og:description" content="Trader desde 2021 e criador do SMC Engine PRO, indicador para TradingView. Teste grátis por 30 dias.">
+<meta property="og:image" content="https://abdallacrypto.com/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://abdallacrypto.com/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://abdallacrypto.com/avatar.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://abdallacrypto.com/og.jpg">
+<meta name="theme-color" content="#050506">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%23050506'/><text x='50' y='68' text-anchor='middle' font-size='56' font-family='system-ui,sans-serif' font-weight='700' fill='%23E9B949'>A</text></svg>">
 <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="avatar-800.webp" type="image/webp" fetchpriority="high">
 <style>
 @font-face{font-family:'Geist';font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/geist-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:'Geist Mono';font-style:normal;font-weight:400 600;font-display:swap;src:url(fonts/geist-mono-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 </style>
 <style>
-:root{
-  --bg:#070A09; --surface:#0D1210; --surface-2:#111815; --line:#1B2420; --line-2:#26322C;
-  --text:#E9F0EC; --muted:#93A39B; --faint:#6F7F77;
-  --green:#00E887; --glow:#00FF88; --red:#FF5C6C; --amber:#FFB020;
-  --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --r-s:10px; --r-m:14px; --r-l:16px;
-  --gut:20px; --max:980px;
-}
-*,*::before,*::after{box-sizing:border-box}
+:root{--bg:#050506;--s1:#0B0C0F;--s2:#111318;--line:#1B1D24;--line2:#2B2E38;--text:#F3F1EA;--muted:#A5A29A;--faint:#807D76;
+--gold:#E9B949;--gold2:#F8E08E;--gold3:#B5852A;--cyan:#22D3EE;--cyan2:#7DE7F7;
+--sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--gut:20px;--max:1080px}
+*{box-sizing:border-box;margin:0}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;
-  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
-img,svg{display:block;max-width:100%}
-a{color:inherit}
-h1,h2,h3,p{margin:0}
-:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}
+body{background:var(--bg);color:var(--text);font:400 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
 .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--gut)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-
-/* faixa de prévia */
-
-/* botões */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:12px;
-  font:600 15.5px/1 var(--sans);letter-spacing:-.005em;text-decoration:none;white-space:nowrap;border:1px solid transparent;
-  transition:transform .18s ease,opacity .18s ease}
-.btn:active{transform:scale(.98)}
-.btn-primary{background:var(--green);color:#03130B;box-shadow:0 0 0 1px rgba(0,255,136,.35),0 10px 34px -10px rgba(0,255,136,.55)}
-.btn-ghost{background:rgba(233,240,236,.04);color:var(--text);border-color:var(--line-2)}
+.sr:focus{position:fixed;left:12px;top:12px;z-index:50;width:auto;height:auto;clip:auto;padding:10px 14px;background:var(--gold);color:#171204;border-radius:8px}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.eyb{font:500 11.5px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h2{margin-top:12px;font-size:clamp(28px,7.5vw,52px);line-height:1.04;letter-spacing:-.035em;font-weight:600;text-wrap:balance}
+.nb{display:inline-block}
+.lead{margin-top:12px;color:var(--muted);font-size:16px;line-height:1.45;max-width:30em}
+.fine{font:400 11.5px/1.45 var(--mono);color:var(--faint)}
+.sec{padding:72px 0}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:14px;font:600 17px/1 var(--sans);letter-spacing:-.01em;transition:transform .18s ease,box-shadow .18s ease}
 .btn .arr{transition:transform .18s ease}
-@media (hover:hover){.btn:hover{transform:translateY(-1px)}.btn:hover .arr{transform:translateX(3px)}}
-.lang{min-width:44px;min-height:44px;background:transparent;border:1px solid var(--line-2);border-radius:10px;color:var(--muted);font:500 12.5px/1 var(--mono);letter-spacing:.06em;cursor:pointer}
-.hub{position:relative;padding:20px 0 40px}
-.hub::before{content:"";position:absolute;inset:0 0 auto 0;height:520px;pointer-events:none;
-  background:radial-gradient(60% 60% at 50% 0,rgba(0,255,136,.08),transparent 70%),
-    linear-gradient(var(--line) 1px,transparent 1px) 0 0/100% 56px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/56px 100%;
-  opacity:.5;-webkit-mask-image:radial-gradient(90% 90% at 50% 0,#000 10%,transparent 80%);mask-image:radial-gradient(90% 90% at 50% 0,#000 10%,transparent 80%)}
-.hub .wrap{position:relative}
-/* perfil */
-.me{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center}
-.me img{width:60px;height:60px;border-radius:50%;border:1.5px solid var(--green);box-shadow:0 0 0 4px rgba(0,232,135,.08)}
-.me .who{min-width:0}
-.me .handle{font:500 12.5px/1 var(--mono);letter-spacing:.06em;color:var(--green)}
-.me h1{margin-top:6px;font-size:22px;line-height:1.1;letter-spacing:-.03em;font-weight:600}
-.tagline{margin-top:14px;color:var(--muted);font-size:15.5px;max-width:34em}
-/* atalho da porta OKX: só no celular, onde o cartão da OKX fica abaixo da primeira tela */
-.jump{margin-top:14px;display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 14px;border:1px solid rgba(0,232,135,.35);border-radius:var(--r-m);background:rgba(0,232,135,.06);color:var(--text);font-size:14.5px;line-height:1.3;font-weight:500;text-decoration:none}
-.jump .new{flex:none;font:600 10.5px/1 var(--mono);letter-spacing:.08em;color:var(--green);border:1px solid rgba(0,232,135,.45);border-radius:6px;padding:4px 6px}
-.jump .arr{margin-left:auto;color:var(--green)}
-.cols{margin-top:20px;display:grid;gap:12px}
-.side{display:grid;gap:12px;align-content:start}
-.eyebrow{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
-.eyebrow.n{color:var(--muted)}
-
-/* card principal */
-.feat{position:relative;border:1px solid var(--line-2);border-radius:var(--r-l);overflow:hidden;
-  background:radial-gradient(120% 80% at 100% 0,rgba(0,255,136,.10),transparent 60%),var(--surface);
-  box-shadow:0 40px 90px -50px rgba(0,255,136,.3)}
-.feat-top{display:flex;align-items:center;gap:10px;height:38px;padding:0 12px 0 14px;border-bottom:1px solid var(--line);font:500 11px/1 var(--mono);color:var(--muted);white-space:nowrap}
+.btn-gold{background:linear-gradient(180deg,var(--gold2),var(--gold) 55%,#D9A636);color:#171204;box-shadow:0 0 0 1px rgba(248,224,142,.35) inset,0 14px 40px -14px rgba(233,185,73,.55)}
+.btn-cyan{background:linear-gradient(180deg,var(--cyan2),var(--cyan));color:#031318;box-shadow:0 14px 40px -14px rgba(34,211,238,.55)}
+@media (hover:hover){.btn:hover{transform:translateY(-2px)}.btn:hover .arr{transform:translateX(4px)}}
+/* topo */
+.top{position:absolute;inset:0 0 auto 0;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:calc(10px + env(safe-area-inset-top)) var(--gut) 0}
+.brand{display:inline-flex;flex-direction:column;justify-content:center;gap:5px;min-height:44px;color:var(--text)}
+.brand b{font:600 15px/1 var(--sans);letter-spacing:-.01em}
+.brand span{font:500 11.5px/1 var(--mono);color:var(--muted)}
+.lang{min-width:44px;min-height:44px;background:rgba(5,5,6,.5);border:1px solid rgba(255,255,255,.2);border-radius:10px;color:var(--text);font:500 12.5px/1 var(--mono);letter-spacing:.04em;cursor:pointer;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.ph{position:relative;height:min(46vh,400px);height:min(46svh,400px);min-height:250px;background:#0a0a0c}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;filter:grayscale(1) contrast(1.08) brightness(.9)}
+.ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,6,.4) 0,rgba(5,5,6,0) 26%,rgba(5,5,6,.5) 66%,var(--bg) 100%)}
+.hero-c{position:relative;z-index:2;margin-top:-58px;padding-bottom:26px}
+.hero h1{font-weight:600;letter-spacing:-.035em}
+.big{display:block;margin-left:-.04em;padding:0 .1em .04em 0;font-size:clamp(118px,36vw,230px);line-height:.82;font-weight:700;letter-spacing:-.07em;font-variant-numeric:tabular-nums;background:linear-gradient(175deg,#FFF3C4 5%,var(--gold2) 30%,var(--gold) 58%,var(--gold3) 94%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 8px 34px rgba(233,185,73,.3))}
+.big i{font-style:normal;font-size:.6em;letter-spacing:0;margin-left:.03em}
+.h1t{display:block;text-wrap:balance;margin-top:10px;font-size:clamp(25px,6.9vw,46px);line-height:1.06}
+.seal{margin-top:12px;display:flex;align-items:flex-start;gap:8px;font:500 10.5px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.seal::before{content:"";flex:none;width:6px;height:6px;margin-top:4px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.hero .sub{margin-top:12px;font-size:16.5px;line-height:1.4;color:#DAD7CE;max-width:26em}
+.hero .btn{margin-top:16px}
+.hero .fine{margin-top:10px;text-align:center}
+/* segunda porta, em ciano: leva direto pra dobra do grupo (serve pra quem já opera na OKX e pra quem ainda não) */
+.porta{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:0 12px;border:1px solid rgba(34,211,238,.4);border-radius:12px;background:rgba(34,211,238,.08);font:500 14px/1.2 var(--sans);color:var(--text);white-space:nowrap}
+.porta b{font-weight:600;color:var(--cyan2)}
+.porta .arr{color:var(--cyan2);transition:transform .18s ease}
+@media (hover:hover){.porta:hover{border-color:var(--cyan)}.porta:hover .arr{transform:translateX(4px)}}
+@media (min-width:900px){
+  .hero{max-width:var(--max);margin:0 auto;padding:104px var(--gut) 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+  .ph{order:2;height:580px;border-radius:28px;overflow:hidden;border:1px solid var(--line2)}
+  .ph::after{background:linear-gradient(180deg,rgba(5,5,6,0) 55%,rgba(5,5,6,.55))}
+  .hero-c{margin-top:0;padding:0}
+  .hero .btn{display:inline-flex;min-width:380px}
+  .hero .fine{text-align:left}
+  .porta{display:flex;width:380px;margin-top:16px;font-size:15px}
+  .hero .sub{font-size:19px}
+  .top{max-width:var(--max);margin:0 auto}
+  .sec{padding:112px 0}
+}
+/* faixa de prova */
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(233,185,73,.06),rgba(233,185,73,0))}
+.proof ul{list-style:none;padding:0 var(--gut);display:grid;grid-template-columns:1fr 1fr}
+.proof li{padding:22px 0 20px}
+.proof li:nth-child(odd){padding-right:14px;border-right:1px solid var(--line)}
+.proof li:nth-child(even){padding-left:20px}
+.proof li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.proof b{display:block;font:600 clamp(40px,11.5vw,64px)/1 var(--sans);letter-spacing:-.045em;color:var(--gold2);font-variant-numeric:tabular-nums}
+.proof span{display:block;margin-top:8px;font:500 11px/1.35 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:900px){
+  .proof ul{grid-template-columns:repeat(4,1fr)}
+  .proof li,.proof li:nth-child(odd),.proof li:nth-child(even){padding:32px 24px;border-bottom:0;border-right:1px solid var(--line)}
+  .proof li:first-child{padding-left:0}.proof li:last-child{border-right:0}
+}
+/* prints do ranking */
+.row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line2) transparent;padding:4px var(--gut) 14px}
+.row>*{flex:none;scroll-snap-align:start;scroll-margin-left:var(--gut)}
+.rk-row{margin-top:26px}
+.rk{width:210px}
+.rk figcaption{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px;font:500 11px/1 var(--mono);color:var(--faint)}
+.rk figcaption b{font:600 20px/1 var(--sans);letter-spacing:-.03em;color:var(--text)}
+.rk img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line2);background:var(--s1)}
+.rk.best figcaption b{color:var(--gold2)}
+.rk.best img{border-color:var(--gold);box-shadow:0 0 0 1px rgba(233,185,73,.4),0 18px 50px -20px rgba(233,185,73,.5)}
+.after{margin-top:8px}
+@media (min-width:900px){.rk-row{max-width:var(--max);margin-left:auto;margin-right:auto}}
+/* produto */
+.feat{margin-top:26px;position:relative;border:1px solid var(--line2);border-radius:18px;overflow:hidden;background:#131722;box-shadow:0 30px 80px -44px rgba(34,211,238,.4)}
+.feat-top{display:flex;align-items:center;gap:10px;height:38px;padding:0 12px 0 14px;background:#161A25;border-bottom:1px solid #2A2E39;font:500 11px/1 var(--mono);color:var(--muted);white-space:nowrap}
 .feat-top .sym{color:var(--text)}
-.chip{margin-left:auto;display:inline-flex;align-items:center;height:22px;padding:0 8px;border:1px dashed rgba(255,176,32,.5);border-radius:999px;color:var(--amber);font:500 10px/1 var(--mono);letter-spacing:.04em}
-.feat svg.chart{width:100%;height:auto;aspect-ratio:640/400;border-bottom:1px solid #2A2E39}
-.feat-top{background:#161A25;border-bottom-color:#2A2E39}
+.chip{margin-left:auto;display:inline-flex;align-items:center;height:22px;padding:0 8px;border:1px dashed rgba(233,185,73,.55);border-radius:999px;color:var(--gold);font:500 10px/1 var(--mono);letter-spacing:.04em}
+.cw{position:relative}
+.feat svg.chart{width:100%;height:auto;aspect-ratio:640/400}
 .chart text{font-family:var(--mono)}
-.feat-b{padding:18px 18px 20px}
-.feat h2{margin-top:10px;display:flex;align-items:center;gap:9px;font-size:26px;line-height:1.1;letter-spacing:-.035em;font-weight:600}
-.feat h2 .pro{font:600 10px/1 var(--mono);letter-spacing:.12em;color:var(--green);border:1px solid rgba(0,232,135,.4);border-radius:5px;padding:3px 5px}
-.feat p{margin-top:8px;color:var(--muted);font-size:15px;line-height:1.5;max-width:34em}
-.feat .cta{margin-top:16px;display:grid;gap:10px}
-.feat .fine{margin-top:12px;font:400 11.5px/1.4 var(--mono);color:var(--faint)}
-@media (min-width:520px){.feat .cta{display:flex;flex-wrap:wrap}.feat .cta .btn{flex:1 1 210px}}
-
-/* animação do mini gráfico (estado final é o padrão) */
 @keyframes in{from{opacity:0}to{opacity:1}}
 @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @keyframes grow{from{opacity:0;transform:scaleX(0)}to{opacity:1;transform:none}}
@@ -102,95 +129,160 @@ h1,h2,h3,p{margin:0}
 .anim .s.k{animation-name:rise;animation-duration:.22s}
 .anim .s.g{transform-box:fill-box;transform-origin:left center;animation-name:grow;animation-duration:.6s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
 .anim .ping{animation:ping 1.4s ease-out var(--d) 3}
-.cw{position:relative}
-.sig{position:absolute;left:10px;bottom:9px;max-width:calc(100% - 20px);display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 9px;padding:7px 10px;background:rgba(22,30,26,.95);border:1px solid var(--line-2);border-radius:10px;box-shadow:0 10px 30px -12px #000;font-size:11.5px;line-height:1.25}
+.sig{position:absolute;left:10px;bottom:9px;max-width:calc(100% - 20px);display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 9px;padding:7px 10px;background:rgba(8,12,16,.95);border:1px solid rgba(34,211,238,.5);border-radius:10px;box-shadow:0 10px 30px -12px #000,0 0 26px -6px rgba(34,211,238,.55);font-size:11.5px;line-height:1.25}
 .sig b{font-weight:600;white-space:nowrap}
 .sig small{font:400 10.5px/1.25 var(--mono);color:var(--muted);white-space:nowrap}
 .anim .sig{opacity:0;animation:rise .4s cubic-bezier(.2,.8,.2,1) 4.7s forwards}
 .feat .layer,.feat .sig{transition:opacity .45s ease}
 .feat.fade .layer,.feat.fade .sig{opacity:0!important}
-
-/* OKX + ferramentas */
-.okx{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:start;padding:18px;border:1px solid var(--line);border-radius:var(--r-l);background:var(--surface);text-decoration:none;transition:transform .18s ease}
-.okx .mark{grid-row:1/3;grid-column:2;font:700 15px/1 var(--mono);letter-spacing:.04em;color:var(--text);border:1px solid var(--line-2);border-radius:8px;padding:8px 9px}
-.okx h2{margin-top:8px;font-size:19px;line-height:1.2;letter-spacing:-.02em;font-weight:600}
-.okx p{grid-column:1/-1;color:var(--muted);font-size:14.5px;line-height:1.5}
-.okx .go{grid-column:1/-1;margin-top:6px;display:flex;align-items:center;gap:6px;min-height:44px;font-weight:500;font-size:14.5px;color:var(--text);text-decoration:none}
-.okx .have{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:14px;line-height:1.45;text-decoration:none}
-.okx .have b{color:var(--text);font-weight:500}
-.okx .hl{color:var(--green);font-weight:600}
-.more{margin-top:10px;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.tools{border:1px solid var(--line);border-radius:var(--r-l);background:var(--surface);overflow:hidden}
-.tool{display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:center;min-height:68px;padding:12px 16px;text-decoration:none;transition:opacity .18s ease}
-.tools>*+*{border-top:1px solid var(--line)}
-.tool .ic{width:36px;height:36px;border-radius:9px;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--green)}
-.tool b{display:block;font-weight:500;font-size:15px;line-height:1.25}
-.tool small{display:block;margin-top:2px;color:var(--muted);font-size:13px;line-height:1.35}
-.tool .tag{font:600 9.5px/1 var(--mono);letter-spacing:.08em;color:var(--green);border:1px solid rgba(0,232,135,.35);border-radius:4px;padding:3px 5px}
-.tool .chev{color:var(--faint);transition:transform .18s ease}
-details.cr summary{list-style:none;cursor:pointer}
-details.cr summary::-webkit-details-marker{display:none}
-details.cr[open] .chev{transform:rotate(90deg)}
-.cr-in{padding:2px 16px 16px;display:grid;gap:8px}
-.cr-in .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.cr-in a{display:flex;align-items:center;gap:9px;min-height:46px;padding:0 13px;border:1px solid var(--line-2);border-radius:10px;text-decoration:none;font-size:14px;font-weight:500}
-.cr-in a small{display:block;font-weight:400;color:var(--muted);font-size:12px}
-.cr-in a.v{min-height:56px;padding:10px 13px;line-height:1.35}
-.ig{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border:1px solid var(--line-2);border-radius:12px;text-decoration:none;font-weight:500;font-size:15px;background:rgba(233,240,236,.03)}
-@media (hover:hover){.okx:hover{transform:translateY(-1px)}.tool:hover{background:rgba(233,240,236,.025)}}
-
-.footer{border-top:1px solid var(--line);padding:26px 0 36px;color:var(--muted);font-size:12.5px;line-height:1.6}
-.footer p+p{margin-top:8px}
-.footer strong{color:var(--text);font-weight:500}
+.ben{list-style:none;padding:0;margin-top:20px}
+.ben li{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:1.3;letter-spacing:-.012em}
+.ben li::before{content:"";flex:none;width:8px;height:8px;margin-top:7px;border-radius:2px;background:var(--gold);transform:rotate(45deg)}
+.uso .btn{margin-top:24px}
+.uso .fine{margin-top:12px}
+.uso .fine a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 @media (min-width:900px){
-  .hub{padding:56px 0 80px}
-  .me img{width:72px;height:72px}
-  .me h1{font-size:34px}
-  .tagline{font-size:17.5px;margin-top:18px}
-  .jump{display:none}
-  .cols{margin-top:32px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
-  .side{gap:14px}
-  .feat-b{padding:26px 28px 28px}
-  .feat h2{font-size:32px}
-  .feat p{font-size:16.5px}
+  .uso .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;margin-top:36px}
+  .uso .feat{margin-top:0}.uso .ben{margin-top:0}
 }
+/* depoimentos */
+.dep-row{margin-top:26px}
+.dep{width:min(82vw,340px);padding:22px 20px 18px;border:1px solid var(--line2);border-radius:18px;background:linear-gradient(180deg,var(--s2),var(--s1))}
+.dep blockquote{font-size:18px;line-height:1.35;letter-spacing:-.015em}
+.dep blockquote::before{content:"\201C";display:block;height:26px;font:600 44px/1 var(--sans);color:var(--gold)}
+.dep figcaption{margin-top:16px;display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.dep figcaption img,.dep .ini{flex:none;width:36px;height:36px;border-radius:50%;object-fit:cover}
+.dep .ini{display:grid;place-items:center;background:var(--line2);color:var(--text);font:600 12px/1 var(--mono)}
+.dep figcaption b{display:block;color:var(--text);font-weight:600;font-size:14px}
+.more-l{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;color:var(--gold2);font-weight:500;font-size:15px}
+@media (min-width:900px){.dep-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;overflow:visible;max-width:var(--max);margin-left:auto;margin-right:auto;padding:0 var(--gut)}.dep{width:auto}}
+/* OKX */
+.okx{background:radial-gradient(120% 80% at 0% 0%,rgba(34,211,238,.14),rgba(34,211,238,0) 60%),var(--s1);border-top:1px solid rgba(34,211,238,.24);border-bottom:1px solid rgba(34,211,238,.24)}
+.okx .eyb{color:var(--cyan)}
+.pct{margin-top:24px;display:flex;align-items:flex-end;gap:14px}
+.pct b{display:inline-block;padding:0 .1em .06em 0;font:700 clamp(84px,25vw,150px)/.82 var(--sans);letter-spacing:-.06em;background:linear-gradient(175deg,#E6FBFF,var(--cyan2) 35%,var(--cyan) 78%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 8px 30px rgba(34,211,238,.3))}
+.pct span{padding-bottom:calc(4px + .4em);margin-left:-6px;max-width:9.5em;font:500 12px/1.35 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.okx .ben li::before{background:var(--cyan)}
+.okx .lead{color:#D5EEF3}
+.mini{margin-top:22px;font:500 11.5px/1.2 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.okx .ben{margin-top:4px}
+.steps{list-style:none;padding:0;margin-top:8px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-size:16.5px;line-height:1.35;letter-spacing:-.01em}
+.steps li::before{content:counter(s);flex:none;width:24px;height:24px;border-radius:50%;border:1px solid rgba(34,211,238,.55);color:var(--cyan);font:600 11.5px/22px var(--mono);text-align:center}
+.stay{margin-top:18px;font-size:16.5px;line-height:1.4;color:#D5EEF3}
+.okx .btn{margin-top:20px}
+.okx .fine{margin-top:12px}
+/* o grupo por dentro: prints do Discord (nomes dos membros desfocados) */
+.okx .more-l{margin-top:14px;color:var(--cyan2)}
+.dentro{margin-top:40px;scroll-margin-top:16px}
+.gp-row{margin-top:10px}
+.gp{width:min(70vw,270px)}
+.gp a{display:block;border:1px solid var(--line2);border-radius:14px;overflow:hidden;background:#1A1B20}
+.gp img{width:100%;height:auto}
+.gp figcaption{margin-top:8px;font:500 11px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+@media (min-width:900px){.dentro{margin-top:72px}.gp-row{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;overflow:visible;max-width:var(--max);margin-left:auto;margin-right:auto}.gp{width:auto}}
+@media (min-width:900px){.okx .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}.okx .grid>div:last-child .mini:first-child{margin-top:0}.okx .btn{display:inline-flex;min-width:340px}}
+/* mais ferramentas */
+.tools{list-style:none;padding:0;margin-top:22px;border-top:1px solid var(--line)}
+.tool{display:flex;align-items:center;gap:12px;min-height:68px;padding:14px 0;border-bottom:1px solid var(--line)}
+.tool .t{flex:1;min-width:0}
+.tool b{display:block;font-weight:600;font-size:16.5px;letter-spacing:-.01em}
+.tool small{display:block;margin-top:2px;color:var(--muted);font-size:13.5px;line-height:1.35}
+.tag{flex:none;font:600 10.5px/1 var(--mono);letter-spacing:.1em;color:var(--gold);border:1px solid rgba(233,185,73,.4);border-radius:6px;padding:5px 7px}
+.stores{flex:none;display:flex;gap:8px}
+.stores a{display:inline-flex;align-items:center;min-height:44px;padding:0 11px;border:1px solid var(--line2);border-radius:10px;font:500 12px/1 var(--mono);color:var(--text)}
+.yt{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:6px;color:var(--muted);font-size:13.5px;text-decoration:underline;text-underline-offset:3px}
+/* fechamento */
+.fim .btn{margin-top:24px}
+.fim .fine{margin-top:12px}
+@media (min-width:900px){.fim .btn{display:inline-flex;min-width:340px}}
+/* rodapé e barra fixa */
+.footer{padding:36px 0 calc(104px + env(safe-area-inset-bottom));border-top:1px solid var(--line);color:var(--faint);font-size:12.5px;line-height:1.55}
+.footer .ig{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:var(--text);font-weight:500;font-size:15px}
+.footer p{margin-top:10px;max-width:62em}
+.footer strong{color:var(--muted)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:26px var(--gut) calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(5,5,6,0),rgba(5,5,6,.94) 42%);transform:translateY(110%);transition:transform .3s cubic-bezier(.2,.8,.2,1);pointer-events:none}
+.bar.on{transform:none}
+.bar.on .btn{pointer-events:auto}
+.bar .btn{min-height:52px;font-size:16px}
+@media (min-width:900px){.bar{display:none}.footer{padding-bottom:48px}}
+/* entrada suave */
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
-  .anim .s,.anim .ping,.anim .sig{opacity:1!important;animation:none!important}
-  .anim .ping{opacity:0!important}
-  .btn,.btn .arr,.tool,.feat{transition:none}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .anim .s,.anim .sig{opacity:1!important;animation:none!important}
+  .anim .ping{opacity:0!important;animation:none!important}
+  .btn,.btn .arr,.bar{transition:none}
 }
-.about{margin-top:28px;padding:22px 18px;border:1px solid var(--line);border-radius:var(--r-l);background:var(--surface);display:grid;gap:22px;min-width:0}
-.about h2{margin-top:10px;font-size:22px;line-height:1.15;letter-spacing:-.02em;font-weight:600}
-.about h3{font-size:17px;line-height:1.25;letter-spacing:-.01em;font-weight:600}
-.ab-tx p,.ab-rk>p{margin-top:10px;color:var(--muted);font-size:15px;line-height:1.55}
-.ab-l{display:flex;gap:18px}.ab-l a{display:inline-flex;align-items:center;min-height:44px;color:var(--text);font-weight:500;text-underline-offset:3px}
-.ab-rk{min-width:0}
-.rk-row{margin-top:14px;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px;-webkit-overflow-scrolling:touch}
-.rk-row img{flex:none;width:172px;height:auto;border-radius:12px;border:1px solid var(--line-2);scroll-snap-align:start}
-.about .fine{font-size:12.5px;color:var(--faint,var(--muted))}
-@media (min-width:900px){.about{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:32px;padding:28px}.rk-row img{width:190px}}
 </style>
 </head>
 <body>
-
 <a class="sr" href="#conteudo" data-pt="Pular para o conteúdo" data-en="Skip to content">Pular para o conteúdo</a>
+<main id="conteudo">
 
+<section class="hero" aria-labelledby="h1">
+  <div class="top">
+    <a class="brand" href="https://www.instagram.com/abdallacrypto" target="_blank" rel="noopener"><b>Ricardo Abdalla</b><span>@abdallacrypto</span></a>
+    <button class="lang" id="lang" type="button" aria-label="EN: switch to English">EN</button>
+  </div>
+  <div class="ph"><img src="avatar-800.webp" width="800" height="800" alt="Ricardo Abdalla" fetchpriority="high" decoding="async"></div>
+  <div class="hero-c wrap">
+    <h1 id="h1"><span class="big">16<i>×</i></span><span class="h1t" data-pt="no Top 500 global da Bybit" data-en="in the Bybit Global Top 500">no Top 500 global da Bybit</span></h1>
+    <p class="seal"><span data-pt="Ranking público · ago/2025 a jul/2026" data-en="Public leaderboard · Aug 2025 to Jul 2026">Ranking público · ago/2025 a jul/2026</span></p>
+    <p class="sub" data-pt="&lt;span class=&quot;nb&quot;&gt;Opero com o indicador que eu mesmo criei.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Teste por 30 dias.&lt;/span&gt;" data-en="&lt;span class=&quot;nb&quot;&gt;I trade with the indicator I built myself.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Try it for 30 days.&lt;/span&gt;"><span class="nb">Opero com o indicador que eu mesmo criei.</span> <span class="nb">Teste por 30 dias.</span></p>
+    <a class="btn btn-gold" data-cta href="https://engine.abdallacrypto.com/teste"><span data-pt="Testar grátis por 30 dias" data-en="Try free for 30 days">Testar grátis por 30 dias</span><span class="arr" aria-hidden="true">→</span></a>
+    <p class="fine" data-pt="Ferramenta de análise. Não é sinal nem recomendação." data-en="Analysis tool. Not a signal or a recommendation.">Ferramenta de análise. Não é sinal nem recomendação.</p>
+    <a class="porta" href="#okx"><span data-pt="Meu grupo do Discord:" data-en="My Discord group:">Meu grupo do Discord:</span><b data-pt="veja como entrar" data-en="see how to join">veja como entrar</b><span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</section>
 
-<main id="conteudo" class="hub">
+<section class="proof" aria-label="Números">
+  <ul class="wrap">
+    <li><b data-n="16">16</b><span data-pt="aparições no Top 500" data-en="appearances in the Top 500">aparições no Top 500</span></li>
+    <li><b data-n="194" data-from="500" data-pre="#">#194</b><span data-pt="melhor posição" data-en="best rank">melhor posição</span></li>
+    <li><b data-n="3">3</b><span data-pt="rankings: dia, semana e 90 dias" data-en="leaderboards: daily, weekly, 90-day">rankings: dia, semana e 90 dias</span></li>
+    <li><b data-n="2021" data-from="2000">2021</b><span data-pt="operando desde" data-en="trading since">operando desde</span></li>
+  </ul>
+</section>
+
+<section class="sec" id="sobre" aria-labelledby="rank-t">
+  <div class="wrap rv">
+    <p class="eyb" data-pt="A prova" data-en="The proof">A prova</p>
+    <h2 id="rank-t" data-pt="&lt;span class=&quot;nb&quot;&gt;Não acredite em mim.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Veja os prints.&lt;/span&gt;" data-en="&lt;span class=&quot;nb&quot;&gt;Don't take my word.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;See the screenshots.&lt;/span&gt;"><span class="nb">Não acredite em mim.</span> <span class="nb">Veja os prints.</span></h2>
+    <p class="lead" data-pt="Ranking público de derivativos da Bybit. Arraste para ver as 16 aparições." data-en="Bybit public derivatives leaderboard. Swipe to see all 16 appearances.">Ranking público de derivativos da Bybit. Arraste para ver as 16 aparições.</p>
+  </div>
+  <div class="row rk-row" id="rank" tabindex="0" role="group" aria-label="Prints do ranking da Bybit">
+    <figure class="rk best"><figcaption><b>#194</b><span>08/09/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-194-2025-09-08.webp" alt="Bybit Leaderboard: Rank #194, Top 500 Traders, Derivatives, 2025-09-08" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#468</b><span>06/08/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-468-2025-08-06.webp" alt="Bybit Leaderboard: Rank #468, Top 500 Traders, Derivatives, 2025-08-06" width="440" height="463"></figure>
+    <figure class="rk"><figcaption><b>#441</b><span>10/09/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-441-2025-09-10.webp" alt="Bybit Leaderboard: Rank #441, Top 500 Traders, Derivatives, 2025-09-10" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#419</b><span>13/10/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-419-2025-10-13.webp" alt="Bybit Leaderboard: Rank #419, Top 500 Traders, Derivatives, 2025-10-13" width="440" height="471"></figure>
+    <figure class="rk"><figcaption><b>#437</b><span>31/10/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-437-2025-10-31.webp" alt="Bybit Leaderboard: Rank #437, Top 500 Traders, Derivatives, 2025-10-31" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#409</b><span>01/11/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-409-2025-11-01.webp" alt="Bybit Leaderboard: Rank #409, Top 500 Traders, Derivatives, 2025-11-01" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#493</b><span>02/11/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-493-2025-11-02.webp" alt="Bybit Leaderboard: Rank #493, Top 500 Traders, Derivatives, 2025-11-02" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#302</b><span>03/11/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-302-2025-11-03.webp" alt="Bybit Leaderboard: Rank #302, Top 500 Traders, Derivatives, 2025-11-03" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#395</b><span>03/11/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-395-2025-11-03.webp" alt="Bybit Leaderboard: Rank #395, Top 500 Traders, Derivatives, 2025-11-03" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#372</b><span>04/11/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-372-2025-11-04.webp" alt="Bybit Leaderboard: Rank #372, Top 500 Traders, Derivatives, 2025-11-04" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#451</b><span>03/12/2025</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-451-2025-12-03.webp" alt="Bybit Leaderboard: Rank #451, Top 500 Traders, Derivatives, 2025-12-03" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#493</b><span>20/01/2026</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-493-2026-01-20.webp" alt="Bybit Leaderboard: Rank #493, Top 500 Traders, Derivatives, 2026-01-20" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#387</b><span>30/05/2026</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-387-2026-05-30.webp" alt="Bybit Leaderboard: Rank #387, Top 500 Traders, Derivatives, 2026-05-30" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#463</b><span>31/05/2026</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-463-2026-05-31.webp" alt="Bybit Leaderboard: Rank #463, Top 500 Traders, Derivatives, 2026-05-31" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#486</b><span>31/05/2026</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-486-2026-05-31.webp" alt="Bybit Leaderboard: Rank #486, Top 500 Traders, Derivatives, 2026-05-31" width="440" height="458"></figure>
+    <figure class="rk"><figcaption><b>#291</b><span>08/07/2026</span></figcaption><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-291-2026-07-08.webp" alt="Bybit Leaderboard: Rank #291, Top 500 Traders, Derivatives, 2026-07-08" width="440" height="458"></figure>
+  </div>
+  <div class="wrap after">
+    <p class="fine" data-pt="Valores ocultados. Hoje opero na OKX. Resultado passado não garante resultado futuro." data-en="Values hidden. Today I trade on OKX. Past results do not guarantee future results.">Valores ocultados. Hoje opero na OKX. Resultado passado não garante resultado futuro.</p>
+  </div>
+</section>
+
+<section class="sec uso" id="engine" aria-labelledby="uso-t" style="padding-top:0">
   <div class="wrap">
-    <header class="me">
-      <img src="avatar-192.jpg" width="72" height="72" alt="Ricardo Abdalla, @abdallacrypto">
-      <div class="who">
-        <div class="handle">@abdallacrypto</div>
-        <h1 data-pt="Ferramentas para traders" data-en="Tools for traders">Ferramentas para traders</h1>
-      </div>
-      <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
-    </header>
-    <p class="tagline" data-pt="Tudo que você precisa para operar com mais clareza e consistência." data-en="Everything you need to trade with more clarity and consistency.">Tudo que você precisa para operar com mais clareza e consistência.</p>
-    <a class="jump" href="https://membros.abdallacrypto.com/okx" target="_blank" rel="noopener"><span class="new" data-pt="NOVO" data-en="NEW">NOVO</span><span data-pt="Entre no meu grupo do Discord pela OKX" data-en="Join my Discord group through OKX">Entre no meu grupo do Discord pela OKX</span><span class="arr" aria-hidden="true">→</span></a>
-
-    <div class="cols">
-      <article class="feat" id="feat" aria-labelledby="feat-h">
+    <div class="rv">
+      <p class="eyb" data-pt="É isto que eu uso" data-en="This is what I use">É isto que eu uso</p>
+      <h2 id="uso-t" data-pt="&lt;span class=&quot;nb&quot;&gt;Você abre o gráfico.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;A zona já está marcada.&lt;/span&gt;" data-en="&lt;span class=&quot;nb&quot;&gt;You open the chart.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;The zone is already drawn.&lt;/span&gt;"><span class="nb">Você abre o gráfico.</span> <span class="nb">A zona já está marcada.</span></h2>
+    </div>
+    <div class="grid">
+      <article class="feat rv" id="feat" aria-label="SMC Engine PRO">
         <div class="feat-top"><span class="sym">SMC Engine PRO</span><span class="chip" data-pt="Exemplo ilustrativo" data-en="Illustrative example">Exemplo ilustrativo</span></div>
 <div class="cw">
 <svg class="chart tv" viewBox="0 0 640 400" width="640" height="400" role="img" aria-label="Exemplo ilustrativo no estilo do TradingView: o preço cai marcando BOS de baixa, faz um CHOCH de alta, o indicador traça Fibonacci de 50%, 61.8% e 79% e o order block, o preço volta à zona, o alerta dispara e o preço segue.">
@@ -258,112 +350,114 @@ details.cr[open] .chev{transform:rotate(90deg)}
 
 </svg>
 <div class="sig" role="img" aria-label="Exemplo ilustrativo de alerta do indicador"><b>🎯 ZONA DE ALTA BTCUSDT 15</b><small>Toque na fib 79%</small></div>
-</div>
-        <div class="feat-b">
-          <span class="eyebrow" data-pt="Produto principal" data-en="Flagship product">Produto principal</span>
-          <h2 id="feat-h">SMC Engine <span class="pro">PRO</span></h2>
-          <p data-pt="Indicador de Smart Money Concepts para TradingView. Marca estrutura, zonas de Fibonacci e order blocks no seu gráfico e avisa quando o preço chega na zona." data-en="Smart Money Concepts indicator for TradingView. It maps structure, Fibonacci zones and order blocks on your chart and alerts you when price reaches the zone.">Indicador de Smart Money Concepts para TradingView. Marca estrutura, zonas de Fibonacci e order blocks no seu gráfico e avisa quando o preço chega na zona.</p>
-          <div class="cta">
-            <a class="btn btn-primary" href="https://engine.abdallacrypto.com/"><span data-pt="Conhecer o indicador" data-en="See the indicator">Conhecer o indicador</span><span class="arr" aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost" href="https://engine.abdallacrypto.com/teste" data-pt="Testar grátis por 30 dias" data-en="Try free for 30 days">Testar grátis por 30 dias</a>
-          </div>
-          <p class="fine" data-pt="Ferramenta de análise. Não é sinal nem recomendação." data-en="Analysis tool. Not a signal or a recommendation.">Ferramenta de análise. Não é sinal nem recomendação.</p>
-        </div>
       </article>
-
-      <div class="side">
-        <div class="okx">
-          <span class="eyebrow n" data-pt="Corretora parceira" data-en="Partner exchange">Corretora parceira</span>
-          <span class="mark" aria-hidden="true">OKX</span>
-          <h2 data-pt="Opere na OKX comigo" data-en="Trade on OKX with me">Opere na OKX comigo</h2>
-          <p data-pt="A corretora onde eu opero. Pelo meu link você recebe &lt;b class=&quot;hl&quot;&gt;10% de rebate&lt;/b&gt; nas taxas de trade e entra no meu grupo do Discord, com análises diárias e o radar das top 40, enquanto a conta estiver ativa. Vale para conta nova ou para a que você já tem." data-en="The exchange I trade on. Through my link you get a &lt;b class=&quot;hl&quot;&gt;10% rebate&lt;/b&gt; on trading fees and join my Discord group, with daily analysis and the top 40 radar, for as long as your account stays active. It works with a new account or the one you already have.">A corretora onde eu opero. Pelo meu link você recebe <b class="hl">10% de rebate</b> nas taxas de trade e entra no meu grupo do Discord, com análises diárias e o radar das top 40, enquanto a conta estiver ativa. Vale para conta nova ou para a que você já tem.</p>
-          <a class="go" href="https://membros.abdallacrypto.com/okx" target="_blank" rel="noopener"><span data-pt="Entrar no grupo pela OKX" data-en="Join the group through OKX">Entrar no grupo pela OKX</span> <span aria-hidden="true">→</span></a>
-        </div>
-
-        <h2 class="more" data-pt="Mais ferramentas" data-en="More tools">Mais ferramentas</h2>
-        <div class="tools">
-          <a class="tool" href="https://risk.abdallacrypto.com/">
-            <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
-            <span><b data-pt="RiskCalc: gerenciamento de risco" data-en="RiskCalc: risk management">RiskCalc: gerenciamento de risco</b><small data-pt="O tamanho certo da posição, sem fazer conta" data-en="The right position size, no math needed">O tamanho certo da posição, sem fazer conta</small></span>
-            <span class="tag" data-pt="GRÁTIS" data-en="FREE">GRÁTIS</span>
-          </a>
-          <a class="tool" href="https://hud.abdallacrypto.com/">
-            <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg></span>
-            <span><b data-pt="Painel de Tendências MTF" data-en="MTF Trend Panel">Painel de Tendências MTF</b><small data-pt="Regime + RSI de BTC e principais alts, ao vivo" data-en="SMC regime + RSI, BTC and top alts, live">Regime + RSI de BTC e principais alts, ao vivo</small></span>
-            <span class="tag" data-pt="GRÁTIS" data-en="FREE">GRÁTIS</span>
-          </a>
-          <details class="cr">
-            <summary class="tool">
-              <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
-              <span><b>CryptoReports</b><small data-pt="App de PnL para traders, iOS e Android" data-en="PnL app for traders, iOS and Android">App de PnL para traders, iOS e Android</small></span>
-              <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
-            </summary>
-            <div class="cr-in">
-              <div class="row">
-                <a href="https://apps.apple.com/br/app/cryptoreports/id6753964217" target="_blank" rel="noopener" aria-label="CryptoReports na App Store"><span><small data-pt="Baixar na" data-en="Download on the">Baixar na</small>App Store</span></a>
-                <a href="https://play.google.com/store/apps/details?id=com.cryptoreports.app" target="_blank" rel="noopener" aria-label="CryptoReports no Google Play"><span><small data-pt="Disponível no" data-en="Get it on">Disponível no</small>Google Play</span></a>
-              </div>
-              <a class="v" href="https://www.youtube.com/watch?v=qpAZzHGbG0k" target="_blank" rel="noopener">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="#00E887" aria-hidden="true"><path d="M6 4l14 8-14 8z"/></svg>
-                <span><span data-pt="Como ver seu PnL real na Bybit, Binance e Weex" data-en="How to see your real PnL on Bybit, Binance and Weex">Como ver seu PnL real na Bybit, Binance e Weex</span><small data-pt="Com taxas e funding, no YouTube" data-en="With fees and funding, on YouTube">Com taxas e funding, no YouTube</small></span>
-              </a>
-            </div>
-          </details>
-        </div>
-
-        <a class="ig" href="https://www.instagram.com/abdallacrypto" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor" stroke="none"/></svg>
-          <span data-pt="@abdallacrypto no Instagram" data-en="@abdallacrypto on Instagram">@abdallacrypto no Instagram</span>
-        </a>
+      <div class="rv">
+        <ul class="ben">
+          <li data-pt="Estrutura, Fibonacci e OB já marcados." data-en="Structure, Fibonacci and OBs already drawn.">Estrutura, Fibonacci e OB já marcados.</li>
+          <li data-pt="O alerta chega quando o preço toca a zona." data-en="The alert arrives when price touches the zone.">O alerta chega quando o preço toca a zona.</li>
+          <li data-pt="Sem marcar na mão em cada moeda." data-en="No more drawing by hand on every coin.">Sem marcar na mão em cada moeda.</li>
+        </ul>
+        <a class="btn btn-gold" data-cta href="https://engine.abdallacrypto.com/teste"><span data-pt="Testar grátis por 30 dias" data-en="Try free for 30 days">Testar grátis por 30 dias</span><span class="arr" aria-hidden="true">→</span></a>
+        <p class="fine"><span data-pt="SMC Engine PRO, indicador para TradingView. Ferramenta de análise, não é sinal." data-en="SMC Engine PRO, an indicator for TradingView. Analysis tool, not a signal.">SMC Engine PRO, indicador para TradingView. Ferramenta de análise, não é sinal.</span> <a href="https://engine.abdallacrypto.com/" data-pt="Conhecer o indicador" data-en="See the indicator">Conhecer o indicador</a></p>
       </div>
     </div>
-
-    <section class="about" id="sobre" aria-labelledby="sobre-t">
-      <div class="ab-tx">
-        <span class="eyebrow" data-pt="Trader para trader" data-en="Trader to trader">Trader para trader</span>
-        <h2 id="sobre-t" data-pt="Quem é Ricardo Abdalla" data-en="Who is Ricardo Abdalla">Quem é Ricardo Abdalla</h2>
-        <p data-pt="Opero cripto e produzo conteúdo sobre o mercado desde 2021: análise, trade comentado e o jeito que eu leio o gráfico." data-en="I have been trading crypto and making content about the market since 2021: analysis, commented trades and the way I read the chart.">Opero cripto e produzo conteúdo sobre o mercado desde 2021: análise, trade comentado e o jeito que eu leio o gráfico.</p>
-        <p data-pt="O SMC Engine PRO saiu dessa rotina. Eu marcava estrutura, Fibonacci e Order Block na mão, e não dava para repetir aquilo em dezenas de moedas todo dia. O indicador foi a minha solução, e é com ele que eu opero hoje." data-en="SMC Engine PRO came out of that routine. I used to mark structure, Fibonacci and Order Blocks by hand, and there was no way to repeat that across dozens of coins every day. The indicator was my solution, and it is what I trade with today.">O SMC Engine PRO saiu dessa rotina. Eu marcava estrutura, Fibonacci e Order Block na mão, e não dava para repetir aquilo em dezenas de moedas todo dia. O indicador foi a minha solução, e é com ele que eu opero hoje.</p>
-        <p class="ab-l"><a href="https://www.youtube.com/@abdallacrypto" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/abdallacrypto" target="_blank" rel="noopener">Instagram</a></p>
-      </div>
-      <div class="ab-rk">
-        <h3 data-pt="16 aparições no Top 500 Global da Bybit" data-en="16 appearances in the Bybit Global Top 500">16 aparições no Top 500 Global da Bybit</h3>
-        <p data-pt="Ranking público de traders de derivativos, entre agosto de 2025 e julho de 2026, nas tabelas do dia, da semana e de 90 dias. Hoje opero na OKX." data-en="Public ranking of derivatives traders, between August 2025 and July 2026, on the daily, weekly and 90-day boards. Today I trade on OKX.">Ranking público de traders de derivativos, entre agosto de 2025 e julho de 2026, nas tabelas do dia, da semana e de 90 dias. Hoje opero na OKX.</p>
-        <div class="rk-row" tabindex="0" role="group" aria-label="Prints do ranking da Bybit">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-468-2025-08-06.webp" alt="Bybit Leaderboard: Rank #468, Top 500 Traders, Derivatives, 2025-08-06" width="440" height="463">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-194-2025-09-08.webp" alt="Bybit Leaderboard: Rank #194, Top 500 Traders, Derivatives, 2025-09-08" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-441-2025-09-10.webp" alt="Bybit Leaderboard: Rank #441, Top 500 Traders, Derivatives, 2025-09-10" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-419-2025-10-13.webp" alt="Bybit Leaderboard: Rank #419, Top 500 Traders, Derivatives, 2025-10-13" width="440" height="471">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-437-2025-10-31.webp" alt="Bybit Leaderboard: Rank #437, Top 500 Traders, Derivatives, 2025-10-31" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-409-2025-11-01.webp" alt="Bybit Leaderboard: Rank #409, Top 500 Traders, Derivatives, 2025-11-01" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-493-2025-11-02.webp" alt="Bybit Leaderboard: Rank #493, Top 500 Traders, Derivatives, 2025-11-02" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-302-2025-11-03.webp" alt="Bybit Leaderboard: Rank #302, Top 500 Traders, Derivatives, 2025-11-03" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-395-2025-11-03.webp" alt="Bybit Leaderboard: Rank #395, Top 500 Traders, Derivatives, 2025-11-03" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-372-2025-11-04.webp" alt="Bybit Leaderboard: Rank #372, Top 500 Traders, Derivatives, 2025-11-04" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-451-2025-12-03.webp" alt="Bybit Leaderboard: Rank #451, Top 500 Traders, Derivatives, 2025-12-03" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-493-2026-01-20.webp" alt="Bybit Leaderboard: Rank #493, Top 500 Traders, Derivatives, 2026-01-20" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-387-2026-05-30.webp" alt="Bybit Leaderboard: Rank #387, Top 500 Traders, Derivatives, 2026-05-30" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-463-2026-05-31.webp" alt="Bybit Leaderboard: Rank #463, Top 500 Traders, Derivatives, 2026-05-31" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-486-2026-05-31.webp" alt="Bybit Leaderboard: Rank #486, Top 500 Traders, Derivatives, 2026-05-31" width="440" height="458">
-<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="rank/rank-291-2026-07-08.webp" alt="Bybit Leaderboard: Rank #291, Top 500 Traders, Derivatives, 2026-07-08" width="440" height="458">
-        </div>
-        <p class="fine" data-pt="Prints do ranking da Bybit, com os valores ocultados. Arraste para ver todos. Resultado passado não garante resultado futuro." data-en="Screenshots of the Bybit ranking, with the amounts hidden. Swipe to see them all. Past results do not guarantee future results.">Prints do ranking da Bybit, com os valores ocultados. Arraste para ver todos. Resultado passado não garante resultado futuro.</p>
-      </div>
-    </section>
   </div>
+</section>
+
+<section class="sec" id="depoimentos" aria-labelledby="dep-t" style="padding-top:0">
+  <div class="wrap rv">
+    <p class="eyb" data-pt="Depoimentos" data-en="Testimonials">Depoimentos</p>
+    <h2 id="dep-t" data-pt="Quem usa, fala." data-en="Users speak for it.">Quem usa, fala.</h2>
+  </div>
+  <div class="row dep-row rv" tabindex="0" role="group" aria-label="Depoimentos">
+    <figure class="dep"><blockquote data-pt="Com o indicador eu bato o olho no grafico e já sei se está interessante ou não." data-en="With the indicator, one look at the chart and I already know if it's worth trading or not.">Com o indicador eu bato o olho no grafico e já sei se está interessante ou não.</blockquote><figcaption><img src="https://engine.abdallacrypto.com/assets/testimonials/ro_santiago83.jpg" width="36" height="36" alt="" loading="lazy" decoding="async"><span><b>Rodrigo Santiago</b>@ro_santiago83</span></figcaption></figure>
+    <figure class="dep"><blockquote data-pt="Ótimo indicador, preciso e auto explicativo. Facilita muito a vida do trader." data-en="Great indicator, precise and self-explanatory. Makes a trader's life much easier.">Ótimo indicador, preciso e auto explicativo. Facilita muito a vida do trader.</blockquote><figcaption><img src="https://engine.abdallacrypto.com/assets/testimonials/jecson_barbosa.jpg" width="36" height="36" alt="" loading="lazy" decoding="async"><span><b>Decotrader</b>@jecson_barbosa</span></figcaption></figure>
+    <figure class="dep"><blockquote data-pt="Além de sinalizar zonas importantes no gráfico, nos ajuda a cristalizar conceitos de SMC." data-en="In addition to highlighting important areas on the chart, it helps us solidify SMC concepts.">Além de sinalizar zonas importantes no gráfico, nos ajuda a cristalizar conceitos de SMC.</blockquote><figcaption><span class="ini" aria-hidden="true">VB</span><span><b>Victor Brunieri</b><span data-pt="assinante" data-en="subscriber">assinante</span></span></figcaption></figure>
+  </div>
+  <div class="wrap">
+    <a class="more-l" href="https://engine.abdallacrypto.com/#depoimentos"><span data-pt="Ver todos os depoimentos" data-en="See all testimonials">Ver todos os depoimentos</span><span aria-hidden="true">→</span></a>
+    <p class="fine" data-pt="Trechos de depoimentos enviados por assinantes pelo formulário público." data-en="Excerpts from testimonials sent by subscribers through the public form. Translated from Portuguese.">Trechos de depoimentos enviados por assinantes pelo formulário público.</p>
+  </div>
+</section>
+
+<section class="sec okx" id="okx" aria-labelledby="okx-t" data-cta>
+  <div class="wrap grid">
+    <div class="rv">
+      <p class="eyb" data-pt="Meu grupo do Discord" data-en="My Discord group">Meu grupo do Discord</p>
+      <h2 id="okx-t" data-pt="Opere na OKX pelo meu link." data-en="Trade on OKX through my link.">Opere na OKX pelo meu link.</h2>
+      <p class="lead" data-pt="Você entra no meu grupo do Discord e ainda recebe:" data-en="You join my Discord group and also get:">Você entra no meu grupo do Discord e ainda recebe:</p>
+      <p class="pct"><b>10%</b><span data-pt="de rebate nas taxas de trade" data-en="rebate on trading fees">de rebate nas taxas de trade</span></p>
+      <a class="more-l" href="#dentro"><span data-pt="Ver o grupo por dentro" data-en="See inside the group">Ver o grupo por dentro</span><span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="rv">
+      <h3 class="mini" data-pt="No grupo" data-en="In the group">No grupo</h3>
+      <ul class="ben">
+        <li data-pt="Análise diária do mercado." data-en="Daily market analysis.">Análise diária do mercado.</li>
+        <li data-pt="Alertas em tempo real: perpétuos de cripto, ações e commodities da OKX." data-en="Real-time alerts: OKX crypto, stock and commodity perpetuals.">Alertas em tempo real: perpétuos de cripto, ações e commodities da OKX.</li>
+      </ul>
+      <h3 class="mini" data-pt="Como entrar" data-en="How to join">Como entrar</h3>
+      <ol class="steps">
+        <li data-pt="Tenha conta na OKX pelo meu link: nova ou a que você já tem." data-en="Have an OKX account under my link: a new one or the one you already have.">Tenha conta na OKX pelo meu link: nova ou a que você já tem.</li>
+        <li data-pt="Vincule a conta no formulário e receba o convite por e-mail." data-en="Link the account in the form and get the invite by email.">Vincule a conta no formulário e receba o convite por e-mail.</li>
+      </ol>
+      <p class="stay" data-pt="Você fica no grupo enquanto fizer trades com essa conta." data-en="You stay in the group as long as you keep trading with that account.">Você fica no grupo enquanto fizer trades com essa conta.</p>
+      <a class="btn btn-cyan" href="https://membros.abdallacrypto.com/okx" target="_blank" rel="noopener"><span data-pt="Entrar no grupo do Discord" data-en="Join the Discord group">Entrar no grupo do Discord</span><span class="arr" aria-hidden="true">→</span></a>
+      <p class="fine" data-pt="Conta parada sai do grupo, com aviso antes. O indicador é assinado à parte. Alerta não é sinal de entrada." data-en="Idle accounts leave the group, with notice first. The indicator is a separate subscription. An alert is not an entry signal.">Conta parada sai do grupo, com aviso antes. O indicador é assinado à parte. Alerta não é sinal de entrada.</p>
+    </div>
+  </div>
+  <div class="dentro rv" id="dentro">
+    <div class="wrap"><h3 class="mini" data-pt="O grupo por dentro" data-en="Inside the group">O grupo por dentro</h3></div>
+    <div class="row gp-row">
+      <figure class="gp"><a href="grupo/analises.webp" target="_blank" rel="noopener"><img src="grupo/analises.webp" width="720" height="1312" loading="lazy" decoding="async" alt="Print do grupo do Discord: análise diária"></a><figcaption data-pt="Análise diária" data-en="Daily analysis">Análise diária</figcaption></figure>
+      <figure class="gp"><a href="grupo/alertas.webp" target="_blank" rel="noopener"><img src="grupo/alertas.webp" width="720" height="1312" loading="lazy" decoding="async" alt="Print do grupo do Discord: alertas em tempo real"></a><figcaption data-pt="Alertas em tempo real" data-en="Real-time alerts">Alertas em tempo real</figcaption></figure>
+      <figure class="gp"><a href="grupo/resultados-2.webp" target="_blank" rel="noopener"><img src="grupo/resultados-2.webp" width="720" height="1312" loading="lazy" decoding="async" alt="Print do grupo do Discord: resultados dos membros"></a><figcaption data-pt="Resultados dos membros" data-en="Members' results">Resultados dos membros</figcaption></figure>
+      <figure class="gp"><a href="grupo/resultados-1.webp" target="_blank" rel="noopener"><img src="grupo/resultados-1.webp" width="720" height="1312" loading="lazy" decoding="async" alt="Print do grupo do Discord: resultados dos membros"></a><figcaption data-pt="Resultados dos membros" data-en="Members' results">Resultados dos membros</figcaption></figure>
+      <figure class="gp"><a href="grupo/resultados-3.webp" target="_blank" rel="noopener"><img src="grupo/resultados-3.webp" width="720" height="1312" loading="lazy" decoding="async" alt="Print do grupo do Discord: resultados dos membros"></a><figcaption data-pt="Resultados dos membros" data-en="Members' results">Resultados dos membros</figcaption></figure>
+    </div>
+    <div class="wrap"><p class="fine" data-pt="Prints reais, com os nomes dos membros ocultos. Alerta não é sinal de entrada. Resultado passado não garante resultado futuro." data-en="Real screenshots, with members' names hidden. An alert is not an entry signal. Past results do not guarantee future results.">Prints reais, com os nomes dos membros ocultos. Alerta não é sinal de entrada. Resultado passado não garante resultado futuro.</p></div>
+  </div>
+</section>
+
+<section class="sec" id="ferramentas" aria-labelledby="tools-t">
+  <div class="wrap rv">
+    <p class="eyb" data-pt="Também são minhas" data-en="Also mine">Também são minhas</p>
+    <h2 id="tools-t" data-pt="Mais ferramentas minhas." data-en="More of my tools.">Mais ferramentas minhas.</h2>
+    <ul class="tools">
+      <li><a class="tool" href="https://risk.abdallacrypto.com/" target="_blank" rel="noopener"><span class="t"><b>RiskCalc</b><small data-pt="O tamanho certo de cada trade." data-en="The right size for every trade.">O tamanho certo de cada trade.</small></span><span class="tag" data-pt="GRÁTIS" data-en="FREE">GRÁTIS</span></a></li>
+      <li><a class="tool" href="https://hud.abdallacrypto.com/" target="_blank" rel="noopener"><span class="t"><b data-pt="Painel de Tendências MTF" data-en="MTF Trend Panel">Painel de Tendências MTF</b><small data-pt="Regime e RSI do BTC e das principais alts." data-en="Regime and RSI for BTC and major alts.">Regime e RSI do BTC e das principais alts.</small></span><span class="tag" data-pt="GRÁTIS" data-en="FREE">GRÁTIS</span></a></li>
+      <li><div class="tool"><span class="t"><b>CryptoReports</b><small data-pt="App de PnL para traders." data-en="PnL app for traders.">App de PnL para traders.</small></span><span class="stores"><a href="https://play.google.com/store/apps/details?id=com.cryptoreports.app" target="_blank" rel="noopener" aria-label="Android: CryptoReports no Google Play">Android</a></span></div></li>
+    </ul>
+    <a class="yt" href="https://www.youtube.com/watch?v=qpAZzHGbG0k" target="_blank" rel="noopener" data-pt="Vídeo: como ver seu PnL real na Bybit, Binance e Weex" data-en="Video: how to see your real PnL on Bybit, Binance and Weex">Vídeo: como ver seu PnL real na Bybit, Binance e Weex</a>
+  </div>
+</section>
+
+<section class="sec fim" id="teste" aria-labelledby="fim-t" style="padding-top:0">
+  <div class="wrap rv">
+    <p class="eyb" data-pt="Teste grátis" data-en="Free trial">Teste grátis</p>
+    <h2 id="fim-t" data-pt="30 dias com o indicador que eu uso." data-en="30 days with the indicator I use.">30 dias com o indicador que eu uso.</h2>
+    <a class="btn btn-gold" data-cta href="https://engine.abdallacrypto.com/teste"><span data-pt="Testar grátis por 30 dias" data-en="Try free for 30 days">Testar grátis por 30 dias</span><span class="arr" aria-hidden="true">→</span></a>
+    <p class="fine" data-pt="Ferramenta de análise. Não é sinal nem recomendação." data-en="Analysis tool. Not a signal or a recommendation.">Ferramenta de análise. Não é sinal nem recomendação.</p>
+  </div>
+</section>
 </main>
 
 <footer class="footer">
   <div class="wrap">
-    <p><strong data-pt="Aviso de risco." data-en="Risk notice.">Aviso de risco.</strong> <span data-pt="Conteúdo e ferramentas de caráter educacional e analítico. Não constituem recomendação de investimento. Operar criptoativos envolve risco de perda; resultados não são garantidos." data-en="Educational and analytical content and tools. Not investment advice. Trading crypto assets involves risk of loss; results are not guaranteed.">Conteúdo e ferramentas de caráter educacional e analítico. Não constituem recomendação de investimento. Operar criptoativos envolve risco de perda; resultados não são garantidos.</span></p>
+    <a class="ig" href="https://www.instagram.com/abdallacrypto" target="_blank" rel="noopener" data-pt="@abdallacrypto no Instagram" data-en="@abdallacrypto on Instagram">@abdallacrypto no Instagram</a>
+    <p><strong data-pt="Aviso de risco." data-en="Risk notice.">Aviso de risco.</strong> <span data-pt="Conteúdo e ferramentas de caráter educacional e analítico. Não constituem recomendação de investimento. Operar criptoativos envolve risco de perda; resultados não são garantidos. Resultado passado não garante resultado futuro." data-en="Educational and analytical content and tools. Not investment advice. Trading crypto assets involves risk of loss; results are not guaranteed. Past results do not guarantee future results.">Conteúdo e ferramentas de caráter educacional e analítico. Não constituem recomendação de investimento. Operar criptoativos envolve risco de perda; resultados não são garantidos. Resultado passado não garante resultado futuro.</span></p>
     <p data-pt="© 2026 abdallacrypto. Todos os direitos reservados." data-en="© 2026 abdallacrypto. All rights reserved.">© 2026 abdallacrypto. Todos os direitos reservados.</p>
   </div>
 </footer>
 
+<div class="bar" id="bar" aria-hidden="true">
+  <a class="btn btn-gold" tabindex="-1" href="https://engine.abdallacrypto.com/teste"><span data-pt="Testar grátis por 30 dias" data-en="Try free for 30 days">Testar grátis por 30 dias</span><span class="arr" aria-hidden="true">→</span></a>
+</div>
 <script>
 (function(){
   var doc=document.documentElement; doc.classList.add('js');
-  /* idioma: escolha salva, senão o idioma do navegador (como o hub atual) */
+  var IO='IntersectionObserver' in window;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* idioma: escolha salva, senão o idioma do navegador */
   var saved=null; try{ saved=localStorage.getItem('smc-lang'); }catch(e){}
   var nav=(navigator.language||'pt').toLowerCase();
   var lang=saved==='en'||saved==='pt'?saved:(nav.indexOf('pt')===0?'pt':'en');
@@ -372,22 +466,47 @@ details.cr[open] .chev{transform:rotate(90deg)}
     lang=l; doc.lang=l==='pt'?'pt-BR':'en';
     var els=document.querySelectorAll('[data-pt]');
     for(var i=0;i<els.length;i++){ var v=els[i].getAttribute('data-'+l); if(v!==null) els[i].innerHTML=v; }
-    if(btn){ btn.textContent=l==='pt'?'EN':'PT'; btn.setAttribute('aria-label',l==='pt'?'Switch to English':'Mudar para português'); }
+    if(btn){ btn.textContent=l==='pt'?'EN':'PT'; btn.setAttribute('aria-label',l==='pt'?'EN: switch to English':'PT: mudar para português'); }
     if(save){ try{ localStorage.setItem('smc-lang',l); }catch(e){} }
   }
-  /* prints do ranking: carregam todos de uma vez quando o bloco chega perto da tela (lazy por imagem falha em faixa que rola de lado) */
-  (function(){ var sec=document.getElementById('sobre'); if(!sec) return;
-    var carrega=function(){ var im=sec.querySelectorAll('img[data-src]'); for(var i=0;i<im.length;i++){ (function(el){ var u=el.getAttribute('data-src'); el.removeAttribute('data-src');
-      var n=0; el.onerror=function(){ if(++n>3){ el.onerror=null; return; } setTimeout(function(){ el.src=u+'?r='+n; },600*n); }; el.src=u; })(im[i]); } };
-    if(!('IntersectionObserver' in window)){ carrega(); return; }
-    var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ if(es[i].isIntersecting){ io.disconnect(); carrega(); return; } } },{rootMargin:'800px 0px'});
-    io.observe(sec); })();
   if(lang==='en') apply('en',false);
   if(btn) btn.addEventListener('click',function(){ apply(lang==='pt'?'en':'pt',true); });
 
-  /* mini gráfico: só liga a classe; o estado final já está no HTML */
+  /* prints do ranking: carregam todos de uma vez quando a faixa chega perto da tela */
+  (function(){ var sec=document.getElementById('rank'); if(!sec) return;
+    var carrega=function(){ var im=sec.querySelectorAll('img[data-src]'); for(var i=0;i<im.length;i++){ (function(el){ var u=el.getAttribute('data-src'); el.removeAttribute('data-src');
+      var n=0; el.onerror=function(){ if(++n>3){ el.onerror=null; return; } setTimeout(function(){ el.src=u+'?r='+n; },600*n); }; el.src=u; })(im[i]); } };
+    if(!IO){ carrega(); return; }
+    var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ if(es[i].isIntersecting){ io.disconnect(); carrega(); return; } } },{rootMargin:'400px 0px'});
+    io.observe(sec); })();
+
+  /* entrada suave das seções */
+  (function(){ var els=document.querySelectorAll('.rv'), i;
+    if(!IO||reduce){ for(i=0;i<els.length;i++) els[i].classList.add('in'); return; }
+    var io=new IntersectionObserver(function(es){ for(var j=0;j<es.length;j++){ if(es[j].isIntersecting){ es[j].target.classList.add('in'); io.unobserve(es[j].target); } } },{rootMargin:'0px 0px -8% 0px'});
+    for(i=0;i<els.length;i++) io.observe(els[i]); })();
+
+  /* contadores: rodam uma vez; o valor final já está no HTML */
+  (function(){ var box=document.querySelector('.proof'); if(!box||!IO||reduce) return;
+    var ns=box.querySelectorAll('b[data-n]'), feito=false;
+    function roda(){ if(feito) return; feito=true; var t0=null, D=1300;
+      function passo(t){ if(t0===null) t0=t; var p=Math.min(1,(t-t0)/D), e=1-Math.pow(1-p,3);
+        for(var i=0;i<ns.length;i++){ var to=+ns[i].getAttribute('data-n'), from=+(ns[i].getAttribute('data-from')||0);
+          ns[i].textContent=(ns[i].getAttribute('data-pre')||'')+Math.round(from+(to-from)*e); }
+        if(p<1) requestAnimationFrame(passo); }
+      requestAnimationFrame(passo); }
+    new IntersectionObserver(function(es,io){ if(es[0].isIntersecting){ io.disconnect(); roda(); } },{threshold:.6}).observe(box); })();
+
+  /* barra fixa do celular: aparece quando nenhum botão principal (nem a dobra da OKX) está na tela */
+  (function(){ var bar=document.getElementById('bar'); if(!bar||!IO) return;
+    var alvos=document.querySelectorAll('[data-cta]'), vis=0, a=bar.querySelector('a');
+    function atualiza(){ var on=vis===0&&window.pageYOffset>240; bar.classList.toggle('on',on); bar.setAttribute('aria-hidden',on?'false':'true'); if(a) a.tabIndex=on?0:-1; }
+    var io=new IntersectionObserver(function(es){ for(var i=0;i<es.length;i++){ var el=es[i].target, v=es[i].isIntersecting; if(v!==!!el._v){ el._v=v; vis+=v?1:-1; } } atualiza(); });
+    for(var i=0;i<alvos.length;i++) io.observe(alvos[i]);
+    window.addEventListener('scroll',atualiza,{passive:true}); })();
+
+  /* gráfico do indicador: só liga a classe; o estado final já está no HTML */
   var st=document.getElementById('feat');
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if(!st||reduce) return;
   var LOOP=12500, timer=null, fadeT=null, visible=true;
   function play(){
@@ -399,9 +518,7 @@ details.cr[open] .chev{transform:rotate(90deg)}
     },LOOP);
   }
   play();
-  if('IntersectionObserver' in window){
-    new IntersectionObserver(function(en){ visible=en[0].isIntersecting; if(visible&&timer===null) play(); },{threshold:.15}).observe(st);
-  }
+  if(IO){ new IntersectionObserver(function(en){ visible=en[0].isIntersecting; if(visible&&timer===null) play(); },{threshold:.15}).observe(st); }
   document.addEventListener('visibilitychange',function(){ if(!document.hidden&&visible&&timer===null) play(); });
 })();
 </script>

@@ -29,7 +29,7 @@
 --sans:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;--gut:20px;--max:1080px}
 *{box-sizing:border-box;margin:0}
 html{-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font:400 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font:400 16px/1.5 var(--sans);text-wrap:pretty;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img,svg{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font:inherit}
@@ -41,6 +41,7 @@ button{font:inherit}
 h2{margin-top:12px;font-size:clamp(28px,7.5vw,52px);line-height:1.04;letter-spacing:-.035em;font-weight:600;text-wrap:balance}
 .nb{display:inline-block}
 .lead{margin-top:12px;color:var(--muted);font-size:16px;line-height:1.45;max-width:30em}
+@media (min-width:900px){.lead{max-width:46em}}
 .fine{font:400 11.5px/1.45 var(--mono);color:var(--faint)}
 .sec{padding:72px 0}
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:14px;font:600 17px/1 var(--sans);letter-spacing:-.01em;transition:transform .18s ease,box-shadow .18s ease}

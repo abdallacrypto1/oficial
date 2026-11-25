@@ -65,6 +65,10 @@ h1,h2,h3,p{margin:0}
 .me .handle{font:500 12.5px/1 var(--mono);letter-spacing:.06em;color:var(--green)}
 .me h1{margin-top:6px;font-size:22px;line-height:1.1;letter-spacing:-.03em;font-weight:600}
 .tagline{margin-top:14px;color:var(--muted);font-size:15.5px;max-width:34em}
+/* atalho da porta OKX: só no celular, onde o cartão da OKX fica abaixo da primeira tela */
+.jump{margin-top:14px;display:flex;align-items:center;gap:10px;min-height:48px;padding:10px 14px;border:1px solid rgba(0,232,135,.35);border-radius:var(--r-m);background:rgba(0,232,135,.06);color:var(--text);font-size:14.5px;line-height:1.3;font-weight:500;text-decoration:none}
+.jump .new{flex:none;font:600 10.5px/1 var(--mono);letter-spacing:.08em;color:var(--green);border:1px solid rgba(0,232,135,.45);border-radius:6px;padding:4px 6px}
+.jump .arr{margin-left:auto;color:var(--green)}
 .cols{margin-top:20px;display:grid;gap:12px}
 .side{display:grid;gap:12px;align-content:start}
 .eyebrow{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
@@ -143,6 +147,7 @@ details.cr[open] .chev{transform:rotate(90deg)}
   .me img{width:72px;height:72px}
   .me h1{font-size:34px}
   .tagline{font-size:17.5px;margin-top:18px}
+  .jump{display:none}
   .cols{margin-top:32px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
   .side{gap:14px}
   .feat-b{padding:26px 28px 28px}
@@ -182,6 +187,7 @@ details.cr[open] .chev{transform:rotate(90deg)}
       <button class="lang" id="lang" type="button" aria-label="Switch to English">EN</button>
     </header>
     <p class="tagline" data-pt="Tudo que você precisa para operar com mais clareza e consistência." data-en="Everything you need to trade with more clarity and consistency.">Tudo que você precisa para operar com mais clareza e consistência.</p>
+    <a class="jump" href="https://membros.abdallacrypto.com/okx" target="_blank" rel="noopener"><span class="new" data-pt="NOVO" data-en="NEW">NOVO</span><span data-pt="Entre no meu grupo do Discord pela OKX" data-en="Join my Discord group through OKX">Entre no meu grupo do Discord pela OKX</span><span class="arr" aria-hidden="true">→</span></a>
 
     <div class="cols">
       <article class="feat" id="feat" aria-labelledby="feat-h">
@@ -270,9 +276,8 @@ details.cr[open] .chev{transform:rotate(90deg)}
           <span class="eyebrow n" data-pt="Corretora parceira" data-en="Partner exchange">Corretora parceira</span>
           <span class="mark" aria-hidden="true">OKX</span>
           <h2 data-pt="Opere na OKX comigo" data-en="Trade on OKX with me">Opere na OKX comigo</h2>
-          <p data-pt="A corretora onde eu opero. Pelo meu link você recebe &lt;b class=&quot;hl&quot;&gt;10% de rebate&lt;/b&gt; nas taxas de trade, abrindo conta nova ou vinculando a que já tem." data-en="The exchange I trade on. Through my link you get a &lt;b class=&quot;hl&quot;&gt;10% rebate&lt;/b&gt; on trading fees, whether you open a new account or link the one you already have.">A corretora onde eu opero. Pelo meu link você recebe <b class="hl">10% de rebate</b> nas taxas de trade, abrindo conta nova ou vinculando a que já tem.</p>
-          <a class="go" href="https://www.okx.com/join/ABDALLACRYPTO" target="_blank" rel="noopener"><span data-pt="Abrir conta na OKX" data-en="Open an OKX account">Abrir conta na OKX</span> <span aria-hidden="true">→</span></a>
-          <a class="have" href="https://okx.com/ul/f1IP61?channelId=46404062&amp;rebindCode=S4MGEPEV" target="_blank" rel="noopener"><span><b data-pt="Já tem conta?" data-en="Already have an account?">Já tem conta?</b> <span data-pt="Vincule a sua pelo meu link" data-en="Link yours through my link">Vincule a sua pelo meu link</span></span> <span aria-hidden="true">→</span></a>
+          <p data-pt="A corretora onde eu opero. Pelo meu link você recebe &lt;b class=&quot;hl&quot;&gt;10% de rebate&lt;/b&gt; nas taxas de trade e entra no meu grupo do Discord, com análises diárias e o radar das top 40, enquanto a conta estiver ativa. Vale para conta nova ou para a que você já tem." data-en="The exchange I trade on. Through my link you get a &lt;b class=&quot;hl&quot;&gt;10% rebate&lt;/b&gt; on trading fees and join my Discord group, with daily analysis and the top 40 radar, for as long as your account stays active. It works with a new account or the one you already have.">A corretora onde eu opero. Pelo meu link você recebe <b class="hl">10% de rebate</b> nas taxas de trade e entra no meu grupo do Discord, com análises diárias e o radar das top 40, enquanto a conta estiver ativa. Vale para conta nova ou para a que você já tem.</p>
+          <a class="go" href="https://membros.abdallacrypto.com/okx" target="_blank" rel="noopener"><span data-pt="Entrar no grupo pela OKX" data-en="Join the group through OKX">Entrar no grupo pela OKX</span> <span aria-hidden="true">→</span></a>
         </div>
 
         <h2 class="more" data-pt="Mais ferramentas" data-en="More tools">Mais ferramentas</h2>
